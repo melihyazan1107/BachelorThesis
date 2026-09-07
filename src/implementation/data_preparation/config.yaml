@@ -1,0 +1,88 @@
+paths:
+  raw_data_dir: "data/download"
+  processed_dir: "data/processed/resisc45"
+
+preprocessing:
+  val_split_ratio: 0.1
+  global_seed: 1
+  target_size: [224, 224]
+  skip_if_exists: true
+
+poisoning:
+  seeds: [42,2001,2026]
+  rates: [0.01, 0.02, 0.05, 0.10, 0.20]
+  num_classes: 45
+  class_erasure_limit: 0.5
+
+  #  Class-Index Mapping:
+  #   0: airplane             1: airport                 2: baseball_diamond
+  #   3: basketball_court     4: beach                   5: bridge
+  #   6: chaparral            7: church                  8: circular_farmland
+  #   9: cloud               10: commercial_area        11: dense_residential
+  #  12: desert              13: forest                 14: freeway
+  #  15: golf_course         16: ground_track_field     17: harbor
+  #  18: industrial_area     19: intersection           20: island
+  #  21: lake                22: meadow                 23: medium_residential
+  #  24: mobile_home_park    25: mountain               26: overpass
+  #  27: palace              28: parking_lot            29: railway
+  #  30: railway_station     31: rectangular_farmland   32: river
+  #  33: roundabout          34: runway                 35: sea_ice
+  #  36: ship                37: snowberg               38: sparse_residential
+  #  39: stadium             40: storage_tank           41: tennis_court
+  #  42: terrace             43: thermal_power_station  44: wetland
+
+  #  Cosine Similarity of Class-Pairs (RQ2-Sweep, TargetedPoisoner):
+  #   7: church               ↔ 27: palace                      cos_sim=0.717
+  #   3: basketball_court     ↔ 41: tennis_court                cos_sim=0.669
+  #  16: ground_track_field   ↔ 39: stadium                     cos_sim=0.633
+  #   1: airport              ↔ 30: railway_station             cos_sim=0.613
+  #  21: lake                 ↔ 32: river                       cos_sim=0.596
+  #  23: medium_residential   ↔ 38: sparse_residential          cos_sim=0.591
+  #   5: bridge               ↔ 26: overpass                    cos_sim=0.589
+  #  14: freeway              ↔ 29: railway                     cos_sim=0.575
+  #  19: intersection         ↔ 33: roundabout                  cos_sim=0.574
+  #   4: beach                ↔ 36: ship                        cos_sim=0.564
+  #  40: storage_tank         ↔ 43: thermal_power_station       cos_sim=0.561
+  #   8: circular_farmland    ↔ 31: rectangular_farmland        cos_sim=0.543
+  #   0: airplane             ↔ 34: runway                      cos_sim=0.538
+  #  10: commercial_area      ↔ 18: industrial_area             cos_sim=0.521
+  #   2: baseball_diamond     ↔ 15: golf_course                 cos_sim=0.508
+  #  25: mountain             ↔ 44: wetland                     cos_sim=0.478
+
+  target_pairs:
+    - [7, 27]    # church <-> palace,                           cos_sim=0.717
+    - [3, 41]    # basketball_court <-> tennis_court,           cos_sim=0.669
+    - [16, 39]   # ground_track_field <-> stadium,              cos_sim=0.633
+    - [1, 30]    # airport <-> railway_station,                 cos_sim=0.613
+    - [21, 32]   # lake <-> river,                              cos_sim=0.596
+    - [23, 38]   # medium_residential <-> sparse_residential,   cos_sim=0.591
+    - [5, 26]    # bridge <-> overpass,                         cos_sim=0.589
+    - [14, 29]   # freeway <-> railway,                         cos_sim=0.575
+    - [19, 33]   # intersection <-> roundabout,                 cos_sim=0.574
+    - [4, 36]    # beach <-> ship,                              cos_sim=0.564
+    - [40, 43]   # storage_tank <-> thermal_power_station,      cos_sim=0.561
+    - [8, 31]    # circular_farmland <-> rectangular_farmland,  cos_sim=0.543
+    - [0, 34]    # airplane <-> runway,                         cos_sim=0.538
+    - [10, 18]   # commercial_area <-> industrial_area,         cos_sim=0.521
+    - [2, 15]    # baseball_diamond <-> golf_course,            cos_sim=0.508
+    - [25, 44]   # mountain <-> wetland,                        cos_sim=0.478
+
+rq2_1:
+  percentile_threshold: 90
+  inference_batch_size: 128
+
+rq2_2:
+  sim_pair: [7, 27]      # church <-> palace,                   cos_sim=0.717
+  dissim_pair: [12, 26]  # desert <-> overpass,                 cos_sim=0.142
+  rates: [0.05, 0.10, 0.20, 0.50, 1.00]
+
+rq2_3:
+  rate: 0.20
+  n_poisoned: 50
+  n_clean: 50
+  sample_seed: 0
+
+rq2_4:
+  window_start: 25
+  window_end: 49
+  confusion_threshold: 0.5

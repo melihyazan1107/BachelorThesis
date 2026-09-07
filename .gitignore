@@ -1,0 +1,142 @@
+# ------------------------------------------------------------------------------
+# 1. Python
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Build-/Packaging-Artefacts
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# virtuel Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Bytecode-Cache
+.cache/
+
+
+# ------------------------------------------------------------------------------
+# 2. Data
+# ------------------------------------------------------------------------------
+/data/download/
+
+*.h5
+*.hdf5
+
+/data/processed/**/*.pt
+/data/processed/**/*.pdf
+
+# ------------------------------------------------------------------------------
+# 3. Experiments
+# ------------------------------------------------------------------------------
+/experiments/**/*.pt
+/experiments/**/*.pth
+/experiments/**/*.ckpt
+/experiments/**/*.onnx
+
+# Per-Sample-Telemetry
+/experiments/**/sample_telemetry.csv
+
+# TensorBoard / W&B
+/experiments/**/events.out.tfevents.*
+runs/
+wandb/
+lightning_logs/
+
+# ------------------------------------------------------------------------------
+# 4. LaTeX
+# ------------------------------------------------------------------------------
+/thesis/latex/.build/
+/thesis/latex/indent.log
+
+/thesis/latex/main.pdf
+
+/thesis/latex/*.aux
+/thesis/latex/*.bbl
+/thesis/latex/*.bbl-SAVE-ERROR
+/thesis/latex/*.bcf
+/thesis/latex/*.blg
+/thesis/latex/*.fdb_latexmk
+/thesis/latex/*.fls
+/thesis/latex/*.log
+/thesis/latex/*.out
+/thesis/latex/*.run.xml
+/thesis/latex/*.synctex.gz
+/thesis/latex/*.toc
+/thesis/latex/*.lof
+/thesis/latex/*.lot
+/thesis/latex/*.acn
+/thesis/latex/*.acr
+/thesis/latex/*.alg
+/thesis/latex/*.glo
+/thesis/latex/*.gls
+/thesis/latex/*.glg
+/thesis/latex/*.ist
+/thesis/latex/*.nav
+/thesis/latex/*.snm
+/thesis/latex/*.vrb
+/thesis/latex/*.xdv
+
+# ------------------------------------------------------------------------------
+# Editor 
+# ------------------------------------------------------------------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+.idea/
+*.swp
+*.swo
+*~
+
+.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+
+# ------------------------------------------------------------------------------
+# Operating System
+# ------------------------------------------------------------------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS / Linux
+.DS_Store
+.AppleDouble
+.Trash-*
+.nfs*
+
+# ------------------------------------------------------------------------------
+# Other
+# ------------------------------------------------------------------------------
+*.tmp
+*.bak
+*.orig
+*.rej
+tmp/
+scratch/
+
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar

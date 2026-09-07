@@ -1,0 +1,77 @@
+experiment:
+  rq: "RQ3"
+  baseline_rq: "RQ1"
+  model: "mobilenetv2"
+  epochs: 100
+  batch_size: 128
+  early_stopping: false
+  early_stopping_patience: 15
+
+  attacks: ["clean", "RQ1", "RQ2"]
+  seeds:
+    - 42
+    - 2001
+    - 2026
+  rates:
+    - 0.0
+    - 0.01
+    - 0.02
+    - 0.05
+    - 0.10
+    - 0.20
+
+defense:
+  type: "none"
+  warmup_epochs: 25
+  label_smoothing: {epsilon: 0.1}
+  mixup:            {alpha: 0.2}
+  gce:              {q: 0.7}
+  elr:              {lambda: 3.0, beta: 0.7}
+  small_loss:       {forget_rate: null, ramp_epochs: 10}
+  gmm_filter:       {p_threshold: 0.5}
+
+telemetry:
+  sample_level: "window"
+  diagnostics: true
+
+export:
+  traced_model: false
+  embedding_plots: [0.0, 0.20]
+
+optimizer:
+  type: "sgd"
+  lr: 0.1
+  weight_decay: 0.0005
+  momentum: 0.9
+  nesterov: true
+
+scheduler:
+  type: "multistep"
+  milestones: [50,75]
+  gamma: 0.1
+
+augmentations:
+  random_crop: true
+  random_horizontal_flip: true
+  random_rotation: false
+  color_jitter: false
+  random_erasing: false
+
+  crop_size: 224
+  crop_scale: [0.8, 1.0]
+  horizontal_flip_p: 0.5
+  rotation_degrees: 15
+  color_jitter_strength: 0.2
+  erasing_p: 0.5
+  normalize_mean: [0.485, 0.456, 0.406]
+  normalize_std: [0.229, 0.224, 0.225]
+
+hardware:
+  num_workers: 4
+  prefetch_factor: 4
+  pin_memory: true
+  persistent_workers: true
+  compile: true
+  matmul_precision: "high"
+  cudnn_benchmark: true
+  in_memory_data: true

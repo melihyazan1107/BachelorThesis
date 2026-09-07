@@ -1,0 +1,9 @@
+experiment:
+  baseline_rq: "RQ1"
+  model: "resnet18"
+  seeds:
+    - 42
+
+augmentations:
+  normalize_mean: [0.485, 0.456, 0.406]
+  normalize_std: [0.229, 0.224, 0.225]

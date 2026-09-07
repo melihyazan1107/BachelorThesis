@@ -1,0 +1,4 @@
+experiment:
+  rq: "RQ2.4"
+  baseline_rq: "RQ1"
+  model: "resnet18"
