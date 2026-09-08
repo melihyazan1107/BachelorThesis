@@ -1,0 +1,686 @@
+=========================================
+1. SLURM ALLOKATIONS-INFO
+=========================================
+Job ID: 4851
+Array: 4848_0 -> Seed 42
+Ausfuehrender Node: gpu01
+Zugewiesene CPUs: 8
+Zugewiesener Speicher: 32768 MB
+Zugewiesene GPUs: 0
+Zugewiesene GPUs ueber CUDA: 0
+0, Tesla V100S-PCIE-32GB, 32768 MiB, 535.309.01
+
+Zeitzonen-Check -> Node-Uhr (UTC): 2026-07-31 22:00:02 UTC
+Zeitzonen-Check -> korrigiert    : 2026-08-01 00:00:02 CEST
+
+Python: /home/yazanme/miniforge3/envs/venv/bin/python
+Version: Python 3.12.13
+
+Forschungsfrage:  RQ2
+Modell:           convnext_tiny
+Trainings-Config: /home/yazanme/BachelorThesis/BachelorThesis/src/yaml/rq2/rq2_1/rq2_1_train_convnext_tiny_seed42.yaml
+Ausgabe:          /home/yazanme/BachelorThesis/BachelorThesis/experiments/RQ2/convnext_tiny/seed_42
+
+Startzeit: 2026-08-01 00:00:03 CEST
+
+Starting main script...
+Config: /home/yazanme/BachelorThesis/BachelorThesis/src/yaml/rq2/rq2_1/rq2_1_train_convnext_tiny_seed42.yaml
+Experiment: rq=RQ2 model=convnext_tiny rates=[0.0, 0.01, 0.02, 0.05, 0.1, 0.2]
+Defense: none | Seeds: [42] | Attacks: (Einzelarm)
+Set float32 matmul precision to: high
+Initializing PyTorch and checking CUDA...
+Set cudnn.benchmark to: True
+Using device: cuda
+Initializing base loaders...
+Loading validation data from /home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/val.h5... (in_memory=True, workers=6)
+Loading test data from /home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/test.h5... (in_memory=True, workers=6)
+Starting experiment run...
+Loading train data from /home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/train.h5... (in_memory=True, workers=6)
+Testing torch.compile support...
+Successfully compiled model using torch.compile.
+LR-Warmup aktiv: 20 Epochen linear, danach cosine.
+Epoch 001 | Seed 42 | Rate 0.00 | Train Loss: 3.6122 | Val Loss: 3.4901 | Acc (clean): 0.0686 | Acc (poison): 0.0686 | Val Acc: 0.0956 | Time: 00:02:45
+Epoch 002 | Seed 42 | Rate 0.00 | Train Loss: 3.3227 | Val Loss: 3.1350 | Acc (clean): 0.1224 | Acc (poison): 0.1224 | Val Acc: 0.1589 | Time: 00:00:27
+Epoch 003 | Seed 42 | Rate 0.00 | Train Loss: 3.0767 | Val Loss: 2.9551 | Acc (clean): 0.1686 | Acc (poison): 0.1686 | Val Acc: 0.1881 | Time: 00:00:27
+Epoch 004 | Seed 42 | Rate 0.00 | Train Loss: 2.8492 | Val Loss: 2.6597 | Acc (clean): 0.2168 | Acc (poison): 0.2168 | Val Acc: 0.2578 | Time: 00:00:27
+Epoch 005 | Seed 42 | Rate 0.00 | Train Loss: 2.6720 | Val Loss: 2.5105 | Acc (clean): 0.2449 | Acc (poison): 0.2449 | Val Acc: 0.2856 | Time: 00:00:27
+Epoch 006 | Seed 42 | Rate 0.00 | Train Loss: 2.5358 | Val Loss: 2.3821 | Acc (clean): 0.2751 | Acc (poison): 0.2751 | Val Acc: 0.3152 | Time: 00:00:26
+Epoch 007 | Seed 42 | Rate 0.00 | Train Loss: 2.3668 | Val Loss: 2.2517 | Acc (clean): 0.3217 | Acc (poison): 0.3217 | Val Acc: 0.3648 | Time: 00:00:27
+Epoch 008 | Seed 42 | Rate 0.00 | Train Loss: 2.1918 | Val Loss: 2.1323 | Acc (clean): 0.3648 | Acc (poison): 0.3648 | Val Acc: 0.3789 | Time: 00:00:26
+Epoch 009 | Seed 42 | Rate 0.00 | Train Loss: 2.0437 | Val Loss: 1.9662 | Acc (clean): 0.4056 | Acc (poison): 0.4056 | Val Acc: 0.4126 | Time: 00:00:28
+Epoch 010 | Seed 42 | Rate 0.00 | Train Loss: 1.8877 | Val Loss: 1.7688 | Acc (clean): 0.4479 | Acc (poison): 0.4479 | Val Acc: 0.4793 | Time: 00:00:27
+Epoch 011 | Seed 42 | Rate 0.00 | Train Loss: 1.7178 | Val Loss: 1.6084 | Acc (clean): 0.4943 | Acc (poison): 0.4943 | Val Acc: 0.5215 | Time: 00:00:27
+Epoch 012 | Seed 42 | Rate 0.00 | Train Loss: 1.5928 | Val Loss: 1.6011 | Acc (clean): 0.5294 | Acc (poison): 0.5294 | Val Acc: 0.5256 | Time: 00:00:27
+Epoch 013 | Seed 42 | Rate 0.00 | Train Loss: 1.4611 | Val Loss: 1.3988 | Acc (clean): 0.5631 | Acc (poison): 0.5631 | Val Acc: 0.5822 | Time: 00:00:26
+Epoch 014 | Seed 42 | Rate 0.00 | Train Loss: 1.3479 | Val Loss: 1.3184 | Acc (clean): 0.5953 | Acc (poison): 0.5953 | Val Acc: 0.6070 | Time: 00:00:27
+Epoch 015 | Seed 42 | Rate 0.00 | Train Loss: 1.2776 | Val Loss: 1.2447 | Acc (clean): 0.6170 | Acc (poison): 0.6170 | Val Acc: 0.6322 | Time: 00:00:30
+Epoch 016 | Seed 42 | Rate 0.00 | Train Loss: 1.1752 | Val Loss: 1.3108 | Acc (clean): 0.6445 | Acc (poison): 0.6445 | Val Acc: 0.6141 | Time: 00:00:25
+Epoch 017 | Seed 42 | Rate 0.00 | Train Loss: 1.1103 | Val Loss: 1.1169 | Acc (clean): 0.6593 | Acc (poison): 0.6593 | Val Acc: 0.6722 | Time: 00:00:31
+Epoch 018 | Seed 42 | Rate 0.00 | Train Loss: 1.0221 | Val Loss: 1.1232 | Acc (clean): 0.6874 | Acc (poison): 0.6874 | Val Acc: 0.6559 | Time: 00:00:25
+Epoch 019 | Seed 42 | Rate 0.00 | Train Loss: 0.9609 | Val Loss: 1.0035 | Acc (clean): 0.7051 | Acc (poison): 0.7051 | Val Acc: 0.6852 | Time: 00:00:33
+/home/yazanme/miniforge3/envs/venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:240: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 020 | Seed 42 | Rate 0.00 | Train Loss: 0.8936 | Val Loss: 1.0426 | Acc (clean): 0.7221 | Acc (poison): 0.7221 | Val Acc: 0.6837 | Time: 00:00:25
+Epoch 021 | Seed 42 | Rate 0.00 | Train Loss: 0.8296 | Val Loss: 0.8886 | Acc (clean): 0.7407 | Acc (poison): 0.7407 | Val Acc: 0.7326 | Time: 00:00:26
+Epoch 022 | Seed 42 | Rate 0.00 | Train Loss: 0.7402 | Val Loss: 0.8841 | Acc (clean): 0.7654 | Acc (poison): 0.7654 | Val Acc: 0.7319 | Time: 00:00:26
+Epoch 023 | Seed 42 | Rate 0.00 | Train Loss: 0.6808 | Val Loss: 0.8155 | Acc (clean): 0.7823 | Acc (poison): 0.7823 | Val Acc: 0.7530 | Time: 00:00:26
+Epoch 024 | Seed 42 | Rate 0.00 | Train Loss: 0.6044 | Val Loss: 0.8232 | Acc (clean): 0.8044 | Acc (poison): 0.8044 | Val Acc: 0.7526 | Time: 00:00:25
+Epoch 025 | Seed 42 | Rate 0.00 | Train Loss: 0.5542 | Val Loss: 0.7990 | Acc (clean): 0.8228 | Acc (poison): 0.8228 | Val Acc: 0.7589 | Time: 00:00:27
+Epoch 026 | Seed 42 | Rate 0.00 | Train Loss: 0.5121 | Val Loss: 0.7218 | Acc (clean): 0.8335 | Acc (poison): 0.8335 | Val Acc: 0.7852 | Time: 00:00:27
+Epoch 027 | Seed 42 | Rate 0.00 | Train Loss: 0.4560 | Val Loss: 0.7086 | Acc (clean): 0.8520 | Acc (poison): 0.8520 | Val Acc: 0.7859 | Time: 00:00:26
+Epoch 028 | Seed 42 | Rate 0.00 | Train Loss: 0.4062 | Val Loss: 0.6928 | Acc (clean): 0.8663 | Acc (poison): 0.8663 | Val Acc: 0.7948 | Time: 00:00:26
+Epoch 029 | Seed 42 | Rate 0.00 | Train Loss: 0.3834 | Val Loss: 0.7176 | Acc (clean): 0.8732 | Acc (poison): 0.8732 | Val Acc: 0.7900 | Time: 00:00:25
+Epoch 030 | Seed 42 | Rate 0.00 | Train Loss: 0.3444 | Val Loss: 0.7006 | Acc (clean): 0.8838 | Acc (poison): 0.8838 | Val Acc: 0.7948 | Time: 00:00:25
+Epoch 031 | Seed 42 | Rate 0.00 | Train Loss: 0.3030 | Val Loss: 0.7061 | Acc (clean): 0.8989 | Acc (poison): 0.8989 | Val Acc: 0.8052 | Time: 00:00:25
+Epoch 032 | Seed 42 | Rate 0.00 | Train Loss: 0.2768 | Val Loss: 0.6388 | Acc (clean): 0.9077 | Acc (poison): 0.9077 | Val Acc: 0.8152 | Time: 00:00:28
+Epoch 033 | Seed 42 | Rate 0.00 | Train Loss: 0.2334 | Val Loss: 0.6778 | Acc (clean): 0.9223 | Acc (poison): 0.9223 | Val Acc: 0.8111 | Time: 00:00:25
+Epoch 034 | Seed 42 | Rate 0.00 | Train Loss: 0.2158 | Val Loss: 0.7363 | Acc (clean): 0.9277 | Acc (poison): 0.9277 | Val Acc: 0.7956 | Time: 00:00:25
+Epoch 035 | Seed 42 | Rate 0.00 | Train Loss: 0.1973 | Val Loss: 0.6805 | Acc (clean): 0.9324 | Acc (poison): 0.9324 | Val Acc: 0.8122 | Time: 00:00:24
+Epoch 036 | Seed 42 | Rate 0.00 | Train Loss: 0.1887 | Val Loss: 0.6486 | Acc (clean): 0.9365 | Acc (poison): 0.9365 | Val Acc: 0.8215 | Time: 00:00:25
+Epoch 037 | Seed 42 | Rate 0.00 | Train Loss: 0.1629 | Val Loss: 0.7200 | Acc (clean): 0.9456 | Acc (poison): 0.9456 | Val Acc: 0.8167 | Time: 00:00:25
+Epoch 038 | Seed 42 | Rate 0.00 | Train Loss: 0.1519 | Val Loss: 0.7355 | Acc (clean): 0.9485 | Acc (poison): 0.9485 | Val Acc: 0.8156 | Time: 00:00:25
+Epoch 039 | Seed 42 | Rate 0.00 | Train Loss: 0.1283 | Val Loss: 0.6877 | Acc (clean): 0.9562 | Acc (poison): 0.9562 | Val Acc: 0.8267 | Time: 00:00:25
+Epoch 040 | Seed 42 | Rate 0.00 | Train Loss: 0.1270 | Val Loss: 0.7174 | Acc (clean): 0.9576 | Acc (poison): 0.9576 | Val Acc: 0.8167 | Time: 00:00:25
+Epoch 041 | Seed 42 | Rate 0.00 | Train Loss: 0.1278 | Val Loss: 0.6663 | Acc (clean): 0.9570 | Acc (poison): 0.9570 | Val Acc: 0.8315 | Time: 00:00:25
+Epoch 042 | Seed 42 | Rate 0.00 | Train Loss: 0.0954 | Val Loss: 0.6892 | Acc (clean): 0.9679 | Acc (poison): 0.9679 | Val Acc: 0.8322 | Time: 00:00:24
+Epoch 043 | Seed 42 | Rate 0.00 | Train Loss: 0.0908 | Val Loss: 0.7255 | Acc (clean): 0.9700 | Acc (poison): 0.9700 | Val Acc: 0.8270 | Time: 00:00:24
+Epoch 044 | Seed 42 | Rate 0.00 | Train Loss: 0.0928 | Val Loss: 0.7801 | Acc (clean): 0.9689 | Acc (poison): 0.9689 | Val Acc: 0.8107 | Time: 00:00:25
+Epoch 045 | Seed 42 | Rate 0.00 | Train Loss: 0.0959 | Val Loss: 0.6911 | Acc (clean): 0.9680 | Acc (poison): 0.9680 | Val Acc: 0.8363 | Time: 00:00:25
+Epoch 046 | Seed 42 | Rate 0.00 | Train Loss: 0.0744 | Val Loss: 0.7267 | Acc (clean): 0.9748 | Acc (poison): 0.9748 | Val Acc: 0.8396 | Time: 00:00:25
+Epoch 047 | Seed 42 | Rate 0.00 | Train Loss: 0.0690 | Val Loss: 0.6877 | Acc (clean): 0.9765 | Acc (poison): 0.9765 | Val Acc: 0.8400 | Time: 00:00:25
+Epoch 048 | Seed 42 | Rate 0.00 | Train Loss: 0.0649 | Val Loss: 0.6895 | Acc (clean): 0.9793 | Acc (poison): 0.9793 | Val Acc: 0.8426 | Time: 00:00:24
+Epoch 049 | Seed 42 | Rate 0.00 | Train Loss: 0.0689 | Val Loss: 0.7418 | Acc (clean): 0.9779 | Acc (poison): 0.9779 | Val Acc: 0.8344 | Time: 00:00:25
+Epoch 050 | Seed 42 | Rate 0.00 | Train Loss: 0.0578 | Val Loss: 0.7122 | Acc (clean): 0.9806 | Acc (poison): 0.9806 | Val Acc: 0.8407 | Time: 00:00:24
+Epoch 051 | Seed 42 | Rate 0.00 | Train Loss: 0.0582 | Val Loss: 0.7106 | Acc (clean): 0.9808 | Acc (poison): 0.9808 | Val Acc: 0.8459 | Time: 00:00:24
+Epoch 052 | Seed 42 | Rate 0.00 | Train Loss: 0.0542 | Val Loss: 0.7610 | Acc (clean): 0.9820 | Acc (poison): 0.9820 | Val Acc: 0.8393 | Time: 00:00:25
+Epoch 053 | Seed 42 | Rate 0.00 | Train Loss: 0.0442 | Val Loss: 0.6943 | Acc (clean): 0.9857 | Acc (poison): 0.9857 | Val Acc: 0.8474 | Time: 00:00:25
+Epoch 054 | Seed 42 | Rate 0.00 | Train Loss: 0.0475 | Val Loss: 0.7417 | Acc (clean): 0.9850 | Acc (poison): 0.9850 | Val Acc: 0.8493 | Time: 00:00:25
+Epoch 055 | Seed 42 | Rate 0.00 | Train Loss: 0.0502 | Val Loss: 0.8650 | Acc (clean): 0.9835 | Acc (poison): 0.9835 | Val Acc: 0.8315 | Time: 00:00:25
+Epoch 056 | Seed 42 | Rate 0.00 | Train Loss: 0.0411 | Val Loss: 0.7522 | Acc (clean): 0.9870 | Acc (poison): 0.9870 | Val Acc: 0.8411 | Time: 00:00:25
+Epoch 057 | Seed 42 | Rate 0.00 | Train Loss: 0.0378 | Val Loss: 0.7298 | Acc (clean): 0.9876 | Acc (poison): 0.9876 | Val Acc: 0.8433 | Time: 00:00:24
+Epoch 058 | Seed 42 | Rate 0.00 | Train Loss: 0.0375 | Val Loss: 0.7755 | Acc (clean): 0.9874 | Acc (poison): 0.9874 | Val Acc: 0.8404 | Time: 00:00:24
+Epoch 059 | Seed 42 | Rate 0.00 | Train Loss: 0.0342 | Val Loss: 0.7302 | Acc (clean): 0.9888 | Acc (poison): 0.9888 | Val Acc: 0.8459 | Time: 00:00:24
+Epoch 060 | Seed 42 | Rate 0.00 | Train Loss: 0.0318 | Val Loss: 0.8140 | Acc (clean): 0.9895 | Acc (poison): 0.9895 | Val Acc: 0.8352 | Time: 00:00:24
+Epoch 061 | Seed 42 | Rate 0.00 | Train Loss: 0.0259 | Val Loss: 0.7549 | Acc (clean): 0.9914 | Acc (poison): 0.9914 | Val Acc: 0.8441 | Time: 00:00:25
+Epoch 062 | Seed 42 | Rate 0.00 | Train Loss: 0.0250 | Val Loss: 0.7482 | Acc (clean): 0.9918 | Acc (poison): 0.9918 | Val Acc: 0.8470 | Time: 00:00:24
+Epoch 063 | Seed 42 | Rate 0.00 | Train Loss: 0.0248 | Val Loss: 0.7576 | Acc (clean): 0.9919 | Acc (poison): 0.9919 | Val Acc: 0.8463 | Time: 00:00:24
+Epoch 064 | Seed 42 | Rate 0.00 | Train Loss: 0.0243 | Val Loss: 0.7093 | Acc (clean): 0.9923 | Acc (poison): 0.9923 | Val Acc: 0.8630 | Time: 00:00:24
+Epoch 065 | Seed 42 | Rate 0.00 | Train Loss: 0.0195 | Val Loss: 0.7164 | Acc (clean): 0.9944 | Acc (poison): 0.9944 | Val Acc: 0.8570 | Time: 00:00:25
+Epoch 066 | Seed 42 | Rate 0.00 | Train Loss: 0.0235 | Val Loss: 0.7241 | Acc (clean): 0.9923 | Acc (poison): 0.9923 | Val Acc: 0.8578 | Time: 00:00:24
+Epoch 067 | Seed 42 | Rate 0.00 | Train Loss: 0.0159 | Val Loss: 0.7220 | Acc (clean): 0.9951 | Acc (poison): 0.9951 | Val Acc: 0.8578 | Time: 00:00:24
+Epoch 068 | Seed 42 | Rate 0.00 | Train Loss: 0.0187 | Val Loss: 0.7676 | Acc (clean): 0.9944 | Acc (poison): 0.9944 | Val Acc: 0.8511 | Time: 00:00:25
+Epoch 069 | Seed 42 | Rate 0.00 | Train Loss: 0.0172 | Val Loss: 0.7497 | Acc (clean): 0.9949 | Acc (poison): 0.9949 | Val Acc: 0.8519 | Time: 00:00:24
+Epoch 070 | Seed 42 | Rate 0.00 | Train Loss: 0.0137 | Val Loss: 0.7183 | Acc (clean): 0.9963 | Acc (poison): 0.9963 | Val Acc: 0.8593 | Time: 00:00:25
+Epoch 071 | Seed 42 | Rate 0.00 | Train Loss: 0.0128 | Val Loss: 0.7390 | Acc (clean): 0.9958 | Acc (poison): 0.9958 | Val Acc: 0.8552 | Time: 00:00:25
+Epoch 072 | Seed 42 | Rate 0.00 | Train Loss: 0.0112 | Val Loss: 0.7006 | Acc (clean): 0.9968 | Acc (poison): 0.9968 | Val Acc: 0.8630 | Time: 00:00:24
+Epoch 073 | Seed 42 | Rate 0.00 | Train Loss: 0.0098 | Val Loss: 0.7099 | Acc (clean): 0.9971 | Acc (poison): 0.9971 | Val Acc: 0.8644 | Time: 00:00:24
+Epoch 074 | Seed 42 | Rate 0.00 | Train Loss: 0.0098 | Val Loss: 0.7609 | Acc (clean): 0.9970 | Acc (poison): 0.9970 | Val Acc: 0.8559 | Time: 00:00:24
+Epoch 075 | Seed 42 | Rate 0.00 | Train Loss: 0.0083 | Val Loss: 0.7208 | Acc (clean): 0.9978 | Acc (poison): 0.9978 | Val Acc: 0.8630 | Time: 00:00:24
+Epoch 076 | Seed 42 | Rate 0.00 | Train Loss: 0.0081 | Val Loss: 0.7346 | Acc (clean): 0.9975 | Acc (poison): 0.9975 | Val Acc: 0.8633 | Time: 00:00:24
+Epoch 077 | Seed 42 | Rate 0.00 | Train Loss: 0.0074 | Val Loss: 0.7278 | Acc (clean): 0.9979 | Acc (poison): 0.9979 | Val Acc: 0.8607 | Time: 00:00:24
+Epoch 078 | Seed 42 | Rate 0.00 | Train Loss: 0.0071 | Val Loss: 0.7510 | Acc (clean): 0.9977 | Acc (poison): 0.9977 | Val Acc: 0.8633 | Time: 00:00:24
+Epoch 079 | Seed 42 | Rate 0.00 | Train Loss: 0.0071 | Val Loss: 0.7083 | Acc (clean): 0.9982 | Acc (poison): 0.9982 | Val Acc: 0.8696 | Time: 00:00:24
+Epoch 080 | Seed 42 | Rate 0.00 | Train Loss: 0.0064 | Val Loss: 0.6937 | Acc (clean): 0.9982 | Acc (poison): 0.9982 | Val Acc: 0.8693 | Time: 00:00:24
+Epoch 081 | Seed 42 | Rate 0.00 | Train Loss: 0.0061 | Val Loss: 0.7142 | Acc (clean): 0.9981 | Acc (poison): 0.9981 | Val Acc: 0.8652 | Time: 00:00:24
+Epoch 082 | Seed 42 | Rate 0.00 | Train Loss: 0.0056 | Val Loss: 0.7308 | Acc (clean): 0.9987 | Acc (poison): 0.9987 | Val Acc: 0.8678 | Time: 00:00:24
+Epoch 083 | Seed 42 | Rate 0.00 | Train Loss: 0.0054 | Val Loss: 0.7204 | Acc (clean): 0.9985 | Acc (poison): 0.9985 | Val Acc: 0.8707 | Time: 00:00:25
+Epoch 084 | Seed 42 | Rate 0.00 | Train Loss: 0.0049 | Val Loss: 0.7199 | Acc (clean): 0.9991 | Acc (poison): 0.9991 | Val Acc: 0.8644 | Time: 00:00:25
+Epoch 085 | Seed 42 | Rate 0.00 | Train Loss: 0.0040 | Val Loss: 0.7269 | Acc (clean): 0.9992 | Acc (poison): 0.9992 | Val Acc: 0.8641 | Time: 00:00:24
+Epoch 086 | Seed 42 | Rate 0.00 | Train Loss: 0.0034 | Val Loss: 0.6996 | Acc (clean): 0.9993 | Acc (poison): 0.9993 | Val Acc: 0.8704 | Time: 00:00:24
+Epoch 087 | Seed 42 | Rate 0.00 | Train Loss: 0.0032 | Val Loss: 0.7198 | Acc (clean): 0.9992 | Acc (poison): 0.9992 | Val Acc: 0.8685 | Time: 00:00:24
+Epoch 088 | Seed 42 | Rate 0.00 | Train Loss: 0.0034 | Val Loss: 0.7234 | Acc (clean): 0.9991 | Acc (poison): 0.9991 | Val Acc: 0.8696 | Time: 00:00:24
+Epoch 089 | Seed 42 | Rate 0.00 | Train Loss: 0.0029 | Val Loss: 0.7101 | Acc (clean): 0.9993 | Acc (poison): 0.9993 | Val Acc: 0.8681 | Time: 00:00:24
+Epoch 090 | Seed 42 | Rate 0.00 | Train Loss: 0.0033 | Val Loss: 0.7128 | Acc (clean): 0.9991 | Acc (poison): 0.9991 | Val Acc: 0.8689 | Time: 00:00:24
+Epoch 091 | Seed 42 | Rate 0.00 | Train Loss: 0.0027 | Val Loss: 0.7131 | Acc (clean): 0.9993 | Acc (poison): 0.9993 | Val Acc: 0.8689 | Time: 00:00:24
+Epoch 092 | Seed 42 | Rate 0.00 | Train Loss: 0.0031 | Val Loss: 0.7235 | Acc (clean): 0.9991 | Acc (poison): 0.9991 | Val Acc: 0.8681 | Time: 00:00:24
+Epoch 093 | Seed 42 | Rate 0.00 | Train Loss: 0.0030 | Val Loss: 0.7203 | Acc (clean): 0.9991 | Acc (poison): 0.9991 | Val Acc: 0.8685 | Time: 00:00:24
+Epoch 094 | Seed 42 | Rate 0.00 | Train Loss: 0.0025 | Val Loss: 0.7134 | Acc (clean): 0.9995 | Acc (poison): 0.9995 | Val Acc: 0.8678 | Time: 00:00:24
+Epoch 095 | Seed 42 | Rate 0.00 | Train Loss: 0.0027 | Val Loss: 0.7172 | Acc (clean): 0.9993 | Acc (poison): 0.9993 | Val Acc: 0.8696 | Time: 00:00:24
+Epoch 096 | Seed 42 | Rate 0.00 | Train Loss: 0.0026 | Val Loss: 0.7109 | Acc (clean): 0.9993 | Acc (poison): 0.9993 | Val Acc: 0.8681 | Time: 00:00:24
+Epoch 097 | Seed 42 | Rate 0.00 | Train Loss: 0.0035 | Val Loss: 0.7117 | Acc (clean): 0.9991 | Acc (poison): 0.9991 | Val Acc: 0.8663 | Time: 00:00:24
+Epoch 098 | Seed 42 | Rate 0.00 | Train Loss: 0.0016 | Val Loss: 0.7132 | Acc (clean): 0.9997 | Acc (poison): 0.9997 | Val Acc: 0.8689 | Time: 00:00:24
+Epoch 099 | Seed 42 | Rate 0.00 | Train Loss: 0.0028 | Val Loss: 0.7117 | Acc (clean): 0.9993 | Acc (poison): 0.9993 | Val Acc: 0.8693 | Time: 00:00:24
+Epoch 100 | Seed 42 | Rate 0.00 | Train Loss: 0.0023 | Val Loss: 0.7111 | Acc (clean): 0.9993 | Acc (poison): 0.9993 | Val Acc: 0.8693 | Time: 00:00:24
+Loading train data from /home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/train.h5 with mapping /home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_42/labels_0.01.pt... (in_memory=True, workers=6)
+Testing torch.compile support...
+Successfully compiled model using torch.compile.
+LR-Warmup aktiv: 20 Epochen linear, danach cosine.
+Epoch 001 | Seed 42 | Rate 0.01 | Train Loss: 3.6144 | Val Loss: 3.4908 | Acc (clean): 0.0681 | Acc (poison): 0.0680 | Val Acc: 0.0985 | Time: 00:00:27
+Epoch 002 | Seed 42 | Rate 0.01 | Train Loss: 3.3289 | Val Loss: 3.1394 | Acc (clean): 0.1193 | Acc (poison): 0.1191 | Val Acc: 0.1648 | Time: 00:00:27
+Epoch 003 | Seed 42 | Rate 0.01 | Train Loss: 3.0800 | Val Loss: 2.9208 | Acc (clean): 0.1743 | Acc (poison): 0.1737 | Val Acc: 0.1974 | Time: 00:00:28
+Epoch 004 | Seed 42 | Rate 0.01 | Train Loss: 2.8546 | Val Loss: 2.6734 | Acc (clean): 0.2169 | Acc (poison): 0.2165 | Val Acc: 0.2489 | Time: 00:00:29
+Epoch 005 | Seed 42 | Rate 0.01 | Train Loss: 2.6884 | Val Loss: 2.5233 | Acc (clean): 0.2447 | Acc (poison): 0.2434 | Val Acc: 0.2915 | Time: 00:00:26
+Epoch 006 | Seed 42 | Rate 0.01 | Train Loss: 2.5496 | Val Loss: 2.3784 | Acc (clean): 0.2733 | Acc (poison): 0.2722 | Val Acc: 0.3107 | Time: 00:00:26
+Epoch 007 | Seed 42 | Rate 0.01 | Train Loss: 2.3889 | Val Loss: 2.2669 | Acc (clean): 0.3158 | Acc (poison): 0.3143 | Val Acc: 0.3544 | Time: 00:00:28
+Epoch 008 | Seed 42 | Rate 0.01 | Train Loss: 2.2110 | Val Loss: 2.0838 | Acc (clean): 0.3653 | Acc (poison): 0.3634 | Val Acc: 0.4096 | Time: 00:00:26
+Epoch 009 | Seed 42 | Rate 0.01 | Train Loss: 2.0689 | Val Loss: 2.0336 | Acc (clean): 0.4006 | Acc (poison): 0.3989 | Val Acc: 0.4119 | Time: 00:00:27
+Epoch 010 | Seed 42 | Rate 0.01 | Train Loss: 1.9106 | Val Loss: 1.8167 | Acc (clean): 0.4422 | Acc (poison): 0.4398 | Val Acc: 0.4552 | Time: 00:00:26
+Epoch 011 | Seed 42 | Rate 0.01 | Train Loss: 1.7615 | Val Loss: 1.6325 | Acc (clean): 0.4863 | Acc (poison): 0.4835 | Val Acc: 0.5100 | Time: 00:00:26
+Epoch 012 | Seed 42 | Rate 0.01 | Train Loss: 1.6052 | Val Loss: 1.5282 | Acc (clean): 0.5298 | Acc (poison): 0.5258 | Val Acc: 0.5478 | Time: 00:00:26
+Epoch 013 | Seed 42 | Rate 0.01 | Train Loss: 1.5052 | Val Loss: 1.5354 | Acc (clean): 0.5588 | Acc (poison): 0.5549 | Val Acc: 0.5400 | Time: 00:00:25
+Epoch 014 | Seed 42 | Rate 0.01 | Train Loss: 1.3980 | Val Loss: 1.3172 | Acc (clean): 0.5847 | Acc (poison): 0.5801 | Val Acc: 0.6067 | Time: 00:00:26
+Epoch 015 | Seed 42 | Rate 0.01 | Train Loss: 1.3103 | Val Loss: 1.2382 | Acc (clean): 0.6115 | Acc (poison): 0.6069 | Val Acc: 0.6304 | Time: 00:00:26
+Epoch 016 | Seed 42 | Rate 0.01 | Train Loss: 1.2391 | Val Loss: 1.2331 | Acc (clean): 0.6339 | Acc (poison): 0.6291 | Val Acc: 0.6352 | Time: 00:00:26
+Epoch 017 | Seed 42 | Rate 0.01 | Train Loss: 1.1395 | Val Loss: 1.2674 | Acc (clean): 0.6594 | Acc (poison): 0.6550 | Val Acc: 0.6178 | Time: 00:00:25
+Epoch 018 | Seed 42 | Rate 0.01 | Train Loss: 1.0792 | Val Loss: 1.0891 | Acc (clean): 0.6752 | Acc (poison): 0.6703 | Val Acc: 0.6770 | Time: 00:00:26
+Epoch 019 | Seed 42 | Rate 0.01 | Train Loss: 1.0125 | Val Loss: 1.0441 | Acc (clean): 0.6951 | Acc (poison): 0.6901 | Val Acc: 0.6807 | Time: 00:00:26
+/home/yazanme/miniforge3/envs/venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:240: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 020 | Seed 42 | Rate 0.01 | Train Loss: 0.9567 | Val Loss: 0.9513 | Acc (clean): 0.7151 | Acc (poison): 0.7100 | Val Acc: 0.7122 | Time: 00:00:26
+Epoch 021 | Seed 42 | Rate 0.01 | Train Loss: 0.8835 | Val Loss: 0.9321 | Acc (clean): 0.7329 | Acc (poison): 0.7280 | Val Acc: 0.7219 | Time: 00:00:27
+Epoch 022 | Seed 42 | Rate 0.01 | Train Loss: 0.8196 | Val Loss: 0.8800 | Acc (clean): 0.7473 | Acc (poison): 0.7420 | Val Acc: 0.7359 | Time: 00:00:27
+Epoch 023 | Seed 42 | Rate 0.01 | Train Loss: 0.7425 | Val Loss: 0.8601 | Acc (clean): 0.7736 | Acc (poison): 0.7682 | Val Acc: 0.7415 | Time: 00:00:26
+Epoch 024 | Seed 42 | Rate 0.01 | Train Loss: 0.6771 | Val Loss: 0.8688 | Acc (clean): 0.7967 | Acc (poison): 0.7912 | Val Acc: 0.7448 | Time: 00:00:25
+Epoch 025 | Seed 42 | Rate 0.01 | Train Loss: 0.5992 | Val Loss: 0.8318 | Acc (clean): 0.8160 | Acc (poison): 0.8098 | Val Acc: 0.7526 | Time: 00:00:27
+Epoch 026 | Seed 42 | Rate 0.01 | Train Loss: 0.5640 | Val Loss: 0.8417 | Acc (clean): 0.8254 | Acc (poison): 0.8198 | Val Acc: 0.7507 | Time: 00:00:25
+Epoch 027 | Seed 42 | Rate 0.01 | Train Loss: 0.5048 | Val Loss: 0.7028 | Acc (clean): 0.8441 | Acc (poison): 0.8386 | Val Acc: 0.7878 | Time: 00:00:27
+Epoch 028 | Seed 42 | Rate 0.01 | Train Loss: 0.4567 | Val Loss: 0.6867 | Acc (clean): 0.8580 | Acc (poison): 0.8529 | Val Acc: 0.7963 | Time: 00:02:29
+Epoch 029 | Seed 42 | Rate 0.01 | Train Loss: 0.4168 | Val Loss: 0.6897 | Acc (clean): 0.8703 | Acc (poison): 0.8658 | Val Acc: 0.7933 | Time: 00:00:24
+Epoch 030 | Seed 42 | Rate 0.01 | Train Loss: 0.3716 | Val Loss: 0.7245 | Acc (clean): 0.8818 | Acc (poison): 0.8780 | Val Acc: 0.7956 | Time: 00:00:25
+Epoch 031 | Seed 42 | Rate 0.01 | Train Loss: 0.3511 | Val Loss: 0.7168 | Acc (clean): 0.8874 | Acc (poison): 0.8835 | Val Acc: 0.7907 | Time: 00:00:25
+Epoch 032 | Seed 42 | Rate 0.01 | Train Loss: 0.3075 | Val Loss: 0.6778 | Acc (clean): 0.8996 | Acc (poison): 0.8971 | Val Acc: 0.8052 | Time: 00:00:42
+Epoch 033 | Seed 42 | Rate 0.01 | Train Loss: 0.2758 | Val Loss: 0.7009 | Acc (clean): 0.9108 | Acc (poison): 0.9081 | Val Acc: 0.8122 | Time: 00:00:25
+Epoch 034 | Seed 42 | Rate 0.01 | Train Loss: 0.2642 | Val Loss: 0.7143 | Acc (clean): 0.9137 | Acc (poison): 0.9123 | Val Acc: 0.8081 | Time: 00:00:24
+Epoch 035 | Seed 42 | Rate 0.01 | Train Loss: 0.2219 | Val Loss: 0.6919 | Acc (clean): 0.9294 | Acc (poison): 0.9286 | Val Acc: 0.8093 | Time: 00:00:25
+Epoch 036 | Seed 42 | Rate 0.01 | Train Loss: 0.1902 | Val Loss: 0.7227 | Acc (clean): 0.9364 | Acc (poison): 0.9363 | Val Acc: 0.8211 | Time: 00:00:24
+Epoch 037 | Seed 42 | Rate 0.01 | Train Loss: 0.1827 | Val Loss: 0.6705 | Acc (clean): 0.9386 | Acc (poison): 0.9396 | Val Acc: 0.8215 | Time: 00:00:26
+Epoch 038 | Seed 42 | Rate 0.01 | Train Loss: 0.1766 | Val Loss: 0.7152 | Acc (clean): 0.9405 | Acc (poison): 0.9415 | Val Acc: 0.8141 | Time: 00:00:25
+Epoch 039 | Seed 42 | Rate 0.01 | Train Loss: 0.1574 | Val Loss: 0.6715 | Acc (clean): 0.9440 | Acc (poison): 0.9458 | Val Acc: 0.8274 | Time: 00:00:25
+Epoch 040 | Seed 42 | Rate 0.01 | Train Loss: 0.1305 | Val Loss: 0.7375 | Acc (clean): 0.9529 | Acc (poison): 0.9563 | Val Acc: 0.8233 | Time: 00:00:25
+Epoch 041 | Seed 42 | Rate 0.01 | Train Loss: 0.1314 | Val Loss: 0.7134 | Acc (clean): 0.9510 | Acc (poison): 0.9549 | Val Acc: 0.8293 | Time: 00:00:25
+Epoch 042 | Seed 42 | Rate 0.01 | Train Loss: 0.1298 | Val Loss: 0.7031 | Acc (clean): 0.9524 | Acc (poison): 0.9559 | Val Acc: 0.8311 | Time: 00:00:24
+Epoch 043 | Seed 42 | Rate 0.01 | Train Loss: 0.1052 | Val Loss: 0.6636 | Acc (clean): 0.9609 | Acc (poison): 0.9654 | Val Acc: 0.8356 | Time: 00:00:26
+Epoch 044 | Seed 42 | Rate 0.01 | Train Loss: 0.1031 | Val Loss: 0.7219 | Acc (clean): 0.9591 | Acc (poison): 0.9643 | Val Acc: 0.8252 | Time: 00:00:25
+Epoch 045 | Seed 42 | Rate 0.01 | Train Loss: 0.0956 | Val Loss: 0.7113 | Acc (clean): 0.9610 | Acc (poison): 0.9671 | Val Acc: 0.8285 | Time: 00:00:25
+Epoch 046 | Seed 42 | Rate 0.01 | Train Loss: 0.0856 | Val Loss: 0.7574 | Acc (clean): 0.9649 | Acc (poison): 0.9706 | Val Acc: 0.8170 | Time: 00:00:25
+Epoch 047 | Seed 42 | Rate 0.01 | Train Loss: 0.0823 | Val Loss: 0.7111 | Acc (clean): 0.9667 | Acc (poison): 0.9733 | Val Acc: 0.8293 | Time: 00:00:25
+Epoch 048 | Seed 42 | Rate 0.01 | Train Loss: 0.0674 | Val Loss: 0.7333 | Acc (clean): 0.9716 | Acc (poison): 0.9788 | Val Acc: 0.8296 | Time: 00:00:25
+Epoch 049 | Seed 42 | Rate 0.01 | Train Loss: 0.0699 | Val Loss: 0.7807 | Acc (clean): 0.9694 | Acc (poison): 0.9763 | Val Acc: 0.8300 | Time: 00:00:25
+Epoch 050 | Seed 42 | Rate 0.01 | Train Loss: 0.0626 | Val Loss: 0.8255 | Acc (clean): 0.9733 | Acc (poison): 0.9805 | Val Acc: 0.8211 | Time: 00:00:25
+Epoch 051 | Seed 42 | Rate 0.01 | Train Loss: 0.0670 | Val Loss: 0.7317 | Acc (clean): 0.9704 | Acc (poison): 0.9771 | Val Acc: 0.8311 | Time: 00:00:25
+Epoch 052 | Seed 42 | Rate 0.01 | Train Loss: 0.0618 | Val Loss: 0.7192 | Acc (clean): 0.9741 | Acc (poison): 0.9808 | Val Acc: 0.8393 | Time: 00:00:24
+Epoch 053 | Seed 42 | Rate 0.01 | Train Loss: 0.0553 | Val Loss: 0.7682 | Acc (clean): 0.9750 | Acc (poison): 0.9823 | Val Acc: 0.8289 | Time: 00:00:24
+Epoch 054 | Seed 42 | Rate 0.01 | Train Loss: 0.0446 | Val Loss: 0.7355 | Acc (clean): 0.9777 | Acc (poison): 0.9861 | Val Acc: 0.8385 | Time: 00:00:24
+Epoch 055 | Seed 42 | Rate 0.01 | Train Loss: 0.0450 | Val Loss: 0.7837 | Acc (clean): 0.9775 | Acc (poison): 0.9855 | Val Acc: 0.8278 | Time: 00:00:25
+Epoch 056 | Seed 42 | Rate 0.01 | Train Loss: 0.0499 | Val Loss: 0.8278 | Acc (clean): 0.9757 | Acc (poison): 0.9838 | Val Acc: 0.8215 | Time: 00:00:25
+Epoch 057 | Seed 42 | Rate 0.01 | Train Loss: 0.0430 | Val Loss: 0.7421 | Acc (clean): 0.9779 | Acc (poison): 0.9861 | Val Acc: 0.8370 | Time: 00:00:25
+Epoch 058 | Seed 42 | Rate 0.01 | Train Loss: 0.0448 | Val Loss: 0.8053 | Acc (clean): 0.9779 | Acc (poison): 0.9857 | Val Acc: 0.8352 | Time: 00:00:25
+Epoch 059 | Seed 42 | Rate 0.01 | Train Loss: 0.0320 | Val Loss: 0.7622 | Acc (clean): 0.9815 | Acc (poison): 0.9900 | Val Acc: 0.8404 | Time: 00:00:25
+Epoch 060 | Seed 42 | Rate 0.01 | Train Loss: 0.0303 | Val Loss: 0.7625 | Acc (clean): 0.9816 | Acc (poison): 0.9906 | Val Acc: 0.8426 | Time: 00:00:25
+Epoch 061 | Seed 42 | Rate 0.01 | Train Loss: 0.0305 | Val Loss: 0.7883 | Acc (clean): 0.9816 | Acc (poison): 0.9901 | Val Acc: 0.8404 | Time: 00:00:24
+Epoch 062 | Seed 42 | Rate 0.01 | Train Loss: 0.0300 | Val Loss: 0.7046 | Acc (clean): 0.9819 | Acc (poison): 0.9906 | Val Acc: 0.8552 | Time: 00:00:25
+Epoch 063 | Seed 42 | Rate 0.01 | Train Loss: 0.0316 | Val Loss: 0.7398 | Acc (clean): 0.9813 | Acc (poison): 0.9900 | Val Acc: 0.8489 | Time: 00:00:25
+Epoch 064 | Seed 42 | Rate 0.01 | Train Loss: 0.0234 | Val Loss: 0.7434 | Acc (clean): 0.9835 | Acc (poison): 0.9926 | Val Acc: 0.8485 | Time: 00:00:25
+Epoch 065 | Seed 42 | Rate 0.01 | Train Loss: 0.0221 | Val Loss: 0.7274 | Acc (clean): 0.9838 | Acc (poison): 0.9930 | Val Acc: 0.8478 | Time: 00:00:25
+Epoch 066 | Seed 42 | Rate 0.01 | Train Loss: 0.0190 | Val Loss: 0.7143 | Acc (clean): 0.9850 | Acc (poison): 0.9943 | Val Acc: 0.8526 | Time: 00:00:24
+Epoch 067 | Seed 42 | Rate 0.01 | Train Loss: 0.0214 | Val Loss: 0.7396 | Acc (clean): 0.9842 | Acc (poison): 0.9935 | Val Acc: 0.8474 | Time: 00:00:24
+Epoch 068 | Seed 42 | Rate 0.01 | Train Loss: 0.0190 | Val Loss: 0.7608 | Acc (clean): 0.9851 | Acc (poison): 0.9943 | Val Acc: 0.8493 | Time: 00:00:24
+Epoch 069 | Seed 42 | Rate 0.01 | Train Loss: 0.0169 | Val Loss: 0.7514 | Acc (clean): 0.9856 | Acc (poison): 0.9947 | Val Acc: 0.8507 | Time: 00:00:24
+Epoch 070 | Seed 42 | Rate 0.01 | Train Loss: 0.0187 | Val Loss: 0.7815 | Acc (clean): 0.9856 | Acc (poison): 0.9944 | Val Acc: 0.8496 | Time: 00:00:25
+Epoch 071 | Seed 42 | Rate 0.01 | Train Loss: 0.0163 | Val Loss: 0.7072 | Acc (clean): 0.9857 | Acc (poison): 0.9948 | Val Acc: 0.8548 | Time: 00:00:24
+Epoch 072 | Seed 42 | Rate 0.01 | Train Loss: 0.0140 | Val Loss: 0.7281 | Acc (clean): 0.9863 | Acc (poison): 0.9959 | Val Acc: 0.8548 | Time: 00:00:24
+Epoch 073 | Seed 42 | Rate 0.01 | Train Loss: 0.0107 | Val Loss: 0.7778 | Acc (clean): 0.9878 | Acc (poison): 0.9971 | Val Acc: 0.8485 | Time: 00:00:25
+Epoch 074 | Seed 42 | Rate 0.01 | Train Loss: 0.0100 | Val Loss: 0.8134 | Acc (clean): 0.9874 | Acc (poison): 0.9969 | Val Acc: 0.8400 | Time: 00:00:25
+Epoch 075 | Seed 42 | Rate 0.01 | Train Loss: 0.0114 | Val Loss: 0.7377 | Acc (clean): 0.9869 | Acc (poison): 0.9962 | Val Acc: 0.8556 | Time: 00:00:24
+Epoch 076 | Seed 42 | Rate 0.01 | Train Loss: 0.0095 | Val Loss: 0.7576 | Acc (clean): 0.9878 | Acc (poison): 0.9974 | Val Acc: 0.8563 | Time: 00:00:24
+Epoch 077 | Seed 42 | Rate 0.01 | Train Loss: 0.0075 | Val Loss: 0.7399 | Acc (clean): 0.9883 | Acc (poison): 0.9977 | Val Acc: 0.8504 | Time: 00:00:25
+Epoch 078 | Seed 42 | Rate 0.01 | Train Loss: 0.0080 | Val Loss: 0.7462 | Acc (clean): 0.9884 | Acc (poison): 0.9976 | Val Acc: 0.8563 | Time: 00:00:24
+Epoch 079 | Seed 42 | Rate 0.01 | Train Loss: 0.0086 | Val Loss: 0.7631 | Acc (clean): 0.9880 | Acc (poison): 0.9975 | Val Acc: 0.8581 | Time: 00:00:24
+Epoch 080 | Seed 42 | Rate 0.01 | Train Loss: 0.0065 | Val Loss: 0.7743 | Acc (clean): 0.9883 | Acc (poison): 0.9981 | Val Acc: 0.8489 | Time: 00:00:24
+Epoch 081 | Seed 42 | Rate 0.01 | Train Loss: 0.0074 | Val Loss: 0.7476 | Acc (clean): 0.9888 | Acc (poison): 0.9982 | Val Acc: 0.8570 | Time: 00:00:24
+Epoch 082 | Seed 42 | Rate 0.01 | Train Loss: 0.0052 | Val Loss: 0.7467 | Acc (clean): 0.9888 | Acc (poison): 0.9986 | Val Acc: 0.8663 | Time: 00:00:24
+Epoch 083 | Seed 42 | Rate 0.01 | Train Loss: 0.0055 | Val Loss: 0.7252 | Acc (clean): 0.9887 | Acc (poison): 0.9984 | Val Acc: 0.8670 | Time: 00:00:24
+Epoch 084 | Seed 42 | Rate 0.01 | Train Loss: 0.0057 | Val Loss: 0.7085 | Acc (clean): 0.9887 | Acc (poison): 0.9984 | Val Acc: 0.8678 | Time: 00:00:24
+Epoch 085 | Seed 42 | Rate 0.01 | Train Loss: 0.0048 | Val Loss: 0.7244 | Acc (clean): 0.9892 | Acc (poison): 0.9988 | Val Acc: 0.8619 | Time: 00:00:24
+Epoch 086 | Seed 42 | Rate 0.01 | Train Loss: 0.0039 | Val Loss: 0.7436 | Acc (clean): 0.9892 | Acc (poison): 0.9991 | Val Acc: 0.8596 | Time: 00:00:24
+Epoch 087 | Seed 42 | Rate 0.01 | Train Loss: 0.0043 | Val Loss: 0.7477 | Acc (clean): 0.9891 | Acc (poison): 0.9988 | Val Acc: 0.8619 | Time: 00:00:24
+Epoch 088 | Seed 42 | Rate 0.01 | Train Loss: 0.0038 | Val Loss: 0.7170 | Acc (clean): 0.9891 | Acc (poison): 0.9989 | Val Acc: 0.8648 | Time: 00:00:24
+Epoch 089 | Seed 42 | Rate 0.01 | Train Loss: 0.0032 | Val Loss: 0.7759 | Acc (clean): 0.9895 | Acc (poison): 0.9993 | Val Acc: 0.8574 | Time: 00:00:24
+Epoch 090 | Seed 42 | Rate 0.01 | Train Loss: 0.0034 | Val Loss: 0.7338 | Acc (clean): 0.9894 | Acc (poison): 0.9991 | Val Acc: 0.8659 | Time: 00:00:24
+Epoch 091 | Seed 42 | Rate 0.01 | Train Loss: 0.0041 | Val Loss: 0.7256 | Acc (clean): 0.9891 | Acc (poison): 0.9988 | Val Acc: 0.8626 | Time: 00:00:24
+Epoch 092 | Seed 42 | Rate 0.01 | Train Loss: 0.0035 | Val Loss: 0.7291 | Acc (clean): 0.9895 | Acc (poison): 0.9992 | Val Acc: 0.8693 | Time: 00:00:25
+Epoch 093 | Seed 42 | Rate 0.01 | Train Loss: 0.0034 | Val Loss: 0.7349 | Acc (clean): 0.9893 | Acc (poison): 0.9991 | Val Acc: 0.8681 | Time: 00:00:24
+Epoch 094 | Seed 42 | Rate 0.01 | Train Loss: 0.0033 | Val Loss: 0.7379 | Acc (clean): 0.9894 | Acc (poison): 0.9991 | Val Acc: 0.8626 | Time: 00:00:24
+Epoch 095 | Seed 42 | Rate 0.01 | Train Loss: 0.0027 | Val Loss: 0.7367 | Acc (clean): 0.9896 | Acc (poison): 0.9993 | Val Acc: 0.8652 | Time: 00:00:25
+Epoch 096 | Seed 42 | Rate 0.01 | Train Loss: 0.0027 | Val Loss: 0.7329 | Acc (clean): 0.9894 | Acc (poison): 0.9992 | Val Acc: 0.8681 | Time: 00:00:24
+Epoch 097 | Seed 42 | Rate 0.01 | Train Loss: 0.0028 | Val Loss: 0.7393 | Acc (clean): 0.9896 | Acc (poison): 0.9993 | Val Acc: 0.8652 | Time: 00:00:25
+Epoch 098 | Seed 42 | Rate 0.01 | Train Loss: 0.0033 | Val Loss: 0.7393 | Acc (clean): 0.9895 | Acc (poison): 0.9993 | Val Acc: 0.8648 | Time: 00:00:24
+Epoch 099 | Seed 42 | Rate 0.01 | Train Loss: 0.0028 | Val Loss: 0.7394 | Acc (clean): 0.9896 | Acc (poison): 0.9993 | Val Acc: 0.8656 | Time: 00:00:24
+Epoch 100 | Seed 42 | Rate 0.01 | Train Loss: 0.0026 | Val Loss: 0.7394 | Acc (clean): 0.9894 | Acc (poison): 0.9993 | Val Acc: 0.8656 | Time: 00:00:25
+Loading train data from /home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/train.h5 with mapping /home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_42/labels_0.02.pt... (in_memory=True, workers=6)
+Testing torch.compile support...
+Successfully compiled model using torch.compile.
+LR-Warmup aktiv: 20 Epochen linear, danach cosine.
+Epoch 001 | Seed 42 | Rate 0.02 | Train Loss: 3.6152 | Val Loss: 3.4914 | Acc (clean): 0.0686 | Acc (poison): 0.0682 | Val Acc: 0.0956 | Time: 00:00:27
+Epoch 002 | Seed 42 | Rate 0.02 | Train Loss: 3.3329 | Val Loss: 3.1440 | Acc (clean): 0.1185 | Acc (poison): 0.1175 | Val Acc: 0.1604 | Time: 00:00:26
+Epoch 003 | Seed 42 | Rate 0.02 | Train Loss: 3.0903 | Val Loss: 2.9387 | Acc (clean): 0.1731 | Acc (poison): 0.1719 | Val Acc: 0.1926 | Time: 00:00:26
+Epoch 004 | Seed 42 | Rate 0.02 | Train Loss: 2.8638 | Val Loss: 2.7569 | Acc (clean): 0.2159 | Acc (poison): 0.2141 | Val Acc: 0.2252 | Time: 00:00:26
+Epoch 005 | Seed 42 | Rate 0.02 | Train Loss: 2.7043 | Val Loss: 2.5270 | Acc (clean): 0.2424 | Acc (poison): 0.2403 | Val Acc: 0.2941 | Time: 00:00:26
+Epoch 006 | Seed 42 | Rate 0.02 | Train Loss: 2.5639 | Val Loss: 2.3923 | Acc (clean): 0.2731 | Acc (poison): 0.2705 | Val Acc: 0.3100 | Time: 00:00:26
+Epoch 007 | Seed 42 | Rate 0.02 | Train Loss: 2.4094 | Val Loss: 2.2673 | Acc (clean): 0.3131 | Acc (poison): 0.3090 | Val Acc: 0.3522 | Time: 00:00:26
+Epoch 008 | Seed 42 | Rate 0.02 | Train Loss: 2.2301 | Val Loss: 2.1085 | Acc (clean): 0.3607 | Acc (poison): 0.3568 | Val Acc: 0.3981 | Time: 00:00:26
+Epoch 009 | Seed 42 | Rate 0.02 | Train Loss: 2.0914 | Val Loss: 2.0628 | Acc (clean): 0.3995 | Acc (poison): 0.3949 | Val Acc: 0.4015 | Time: 00:00:26
+Epoch 010 | Seed 42 | Rate 0.02 | Train Loss: 1.9376 | Val Loss: 1.8366 | Acc (clean): 0.4410 | Acc (poison): 0.4345 | Val Acc: 0.4507 | Time: 00:00:26
+Epoch 011 | Seed 42 | Rate 0.02 | Train Loss: 1.7827 | Val Loss: 1.6398 | Acc (clean): 0.4851 | Acc (poison): 0.4778 | Val Acc: 0.5148 | Time: 00:00:28
+Epoch 012 | Seed 42 | Rate 0.02 | Train Loss: 1.6395 | Val Loss: 1.5270 | Acc (clean): 0.5264 | Acc (poison): 0.5182 | Val Acc: 0.5559 | Time: 00:00:26
+Epoch 013 | Seed 42 | Rate 0.02 | Train Loss: 1.5312 | Val Loss: 1.5174 | Acc (clean): 0.5559 | Acc (poison): 0.5476 | Val Acc: 0.5463 | Time: 00:00:26
+Epoch 014 | Seed 42 | Rate 0.02 | Train Loss: 1.4303 | Val Loss: 1.3566 | Acc (clean): 0.5819 | Acc (poison): 0.5743 | Val Acc: 0.5996 | Time: 00:00:26
+Epoch 015 | Seed 42 | Rate 0.02 | Train Loss: 1.3415 | Val Loss: 1.2682 | Acc (clean): 0.6097 | Acc (poison): 0.6009 | Val Acc: 0.6196 | Time: 00:00:26
+Epoch 016 | Seed 42 | Rate 0.02 | Train Loss: 1.2698 | Val Loss: 1.2533 | Acc (clean): 0.6316 | Acc (poison): 0.6222 | Val Acc: 0.6237 | Time: 00:00:26
+Epoch 017 | Seed 42 | Rate 0.02 | Train Loss: 1.1675 | Val Loss: 1.2377 | Acc (clean): 0.6603 | Acc (poison): 0.6505 | Val Acc: 0.6204 | Time: 00:00:26
+Epoch 018 | Seed 42 | Rate 0.02 | Train Loss: 1.1140 | Val Loss: 1.1042 | Acc (clean): 0.6723 | Acc (poison): 0.6620 | Val Acc: 0.6737 | Time: 00:00:26
+Epoch 019 | Seed 42 | Rate 0.02 | Train Loss: 1.0469 | Val Loss: 1.0113 | Acc (clean): 0.6962 | Acc (poison): 0.6852 | Val Acc: 0.6911 | Time: 00:00:26
+/home/yazanme/miniforge3/envs/venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:240: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 020 | Seed 42 | Rate 0.02 | Train Loss: 0.9862 | Val Loss: 0.9679 | Acc (clean): 0.7111 | Acc (poison): 0.7000 | Val Acc: 0.7011 | Time: 00:00:26
+Epoch 021 | Seed 42 | Rate 0.02 | Train Loss: 0.9038 | Val Loss: 0.9840 | Acc (clean): 0.7330 | Acc (poison): 0.7220 | Val Acc: 0.6926 | Time: 00:00:25
+Epoch 022 | Seed 42 | Rate 0.02 | Train Loss: 0.8588 | Val Loss: 0.8764 | Acc (clean): 0.7452 | Acc (poison): 0.7338 | Val Acc: 0.7322 | Time: 00:00:27
+Epoch 023 | Seed 42 | Rate 0.02 | Train Loss: 0.7834 | Val Loss: 0.8939 | Acc (clean): 0.7694 | Acc (poison): 0.7576 | Val Acc: 0.7222 | Time: 00:00:25
+Epoch 024 | Seed 42 | Rate 0.02 | Train Loss: 0.7074 | Val Loss: 0.8763 | Acc (clean): 0.7923 | Acc (poison): 0.7806 | Val Acc: 0.7385 | Time: 00:00:26
+Epoch 025 | Seed 42 | Rate 0.02 | Train Loss: 0.6389 | Val Loss: 0.7900 | Acc (clean): 0.8117 | Acc (poison): 0.7998 | Val Acc: 0.7693 | Time: 00:00:26
+Epoch 026 | Seed 42 | Rate 0.02 | Train Loss: 0.5978 | Val Loss: 0.8217 | Acc (clean): 0.8246 | Acc (poison): 0.8129 | Val Acc: 0.7548 | Time: 00:00:25
+Epoch 027 | Seed 42 | Rate 0.02 | Train Loss: 0.5494 | Val Loss: 0.7803 | Acc (clean): 0.8351 | Acc (poison): 0.8236 | Val Acc: 0.7700 | Time: 00:00:27
+Epoch 028 | Seed 42 | Rate 0.02 | Train Loss: 0.5019 | Val Loss: 0.6812 | Acc (clean): 0.8511 | Acc (poison): 0.8388 | Val Acc: 0.8000 | Time: 00:00:26
+Epoch 029 | Seed 42 | Rate 0.02 | Train Loss: 0.4475 | Val Loss: 0.6753 | Acc (clean): 0.8698 | Acc (poison): 0.8596 | Val Acc: 0.7915 | Time: 00:00:26
+Epoch 030 | Seed 42 | Rate 0.02 | Train Loss: 0.4122 | Val Loss: 0.6880 | Acc (clean): 0.8780 | Acc (poison): 0.8670 | Val Acc: 0.8000 | Time: 00:00:25
+Epoch 031 | Seed 42 | Rate 0.02 | Train Loss: 0.3923 | Val Loss: 0.7246 | Acc (clean): 0.8815 | Acc (poison): 0.8718 | Val Acc: 0.7896 | Time: 00:00:25
+Epoch 032 | Seed 42 | Rate 0.02 | Train Loss: 0.3499 | Val Loss: 0.6902 | Acc (clean): 0.8956 | Acc (poison): 0.8865 | Val Acc: 0.7956 | Time: 00:00:25
+Epoch 033 | Seed 42 | Rate 0.02 | Train Loss: 0.3183 | Val Loss: 0.7048 | Acc (clean): 0.9012 | Acc (poison): 0.8931 | Val Acc: 0.7941 | Time: 00:00:25
+Epoch 034 | Seed 42 | Rate 0.02 | Train Loss: 0.2788 | Val Loss: 0.6851 | Acc (clean): 0.9140 | Acc (poison): 0.9079 | Val Acc: 0.8130 | Time: 00:00:25
+Epoch 035 | Seed 42 | Rate 0.02 | Train Loss: 0.2600 | Val Loss: 0.6812 | Acc (clean): 0.9181 | Acc (poison): 0.9138 | Val Acc: 0.8133 | Time: 00:00:25
+Epoch 036 | Seed 42 | Rate 0.02 | Train Loss: 0.2262 | Val Loss: 0.7793 | Acc (clean): 0.9288 | Acc (poison): 0.9257 | Val Acc: 0.7993 | Time: 00:00:25
+Epoch 037 | Seed 42 | Rate 0.02 | Train Loss: 0.2191 | Val Loss: 0.6465 | Acc (clean): 0.9249 | Acc (poison): 0.9238 | Val Acc: 0.8244 | Time: 00:00:26
+Epoch 038 | Seed 42 | Rate 0.02 | Train Loss: 0.2002 | Val Loss: 0.7345 | Acc (clean): 0.9349 | Acc (poison): 0.9351 | Val Acc: 0.8011 | Time: 00:00:25
+Epoch 039 | Seed 42 | Rate 0.02 | Train Loss: 0.1799 | Val Loss: 0.7249 | Acc (clean): 0.9391 | Acc (poison): 0.9406 | Val Acc: 0.8019 | Time: 00:00:25
+Epoch 040 | Seed 42 | Rate 0.02 | Train Loss: 0.1521 | Val Loss: 0.6799 | Acc (clean): 0.9456 | Acc (poison): 0.9482 | Val Acc: 0.8207 | Time: 00:00:25
+Epoch 041 | Seed 42 | Rate 0.02 | Train Loss: 0.1450 | Val Loss: 0.7520 | Acc (clean): 0.9467 | Acc (poison): 0.9527 | Val Acc: 0.8111 | Time: 00:00:25
+Epoch 042 | Seed 42 | Rate 0.02 | Train Loss: 0.1448 | Val Loss: 0.7687 | Acc (clean): 0.9469 | Acc (poison): 0.9513 | Val Acc: 0.8048 | Time: 00:00:25
+Epoch 043 | Seed 42 | Rate 0.02 | Train Loss: 0.1290 | Val Loss: 0.6912 | Acc (clean): 0.9507 | Acc (poison): 0.9584 | Val Acc: 0.8330 | Time: 00:00:25
+Epoch 044 | Seed 42 | Rate 0.02 | Train Loss: 0.1027 | Val Loss: 0.7893 | Acc (clean): 0.9562 | Acc (poison): 0.9664 | Val Acc: 0.8115 | Time: 00:00:25
+Epoch 045 | Seed 42 | Rate 0.02 | Train Loss: 0.0930 | Val Loss: 0.7374 | Acc (clean): 0.9596 | Acc (poison): 0.9703 | Val Acc: 0.8204 | Time: 00:00:25
+Epoch 046 | Seed 42 | Rate 0.02 | Train Loss: 0.1068 | Val Loss: 0.8000 | Acc (clean): 0.9540 | Acc (poison): 0.9652 | Val Acc: 0.8148 | Time: 00:00:25
+Epoch 047 | Seed 42 | Rate 0.02 | Train Loss: 0.0952 | Val Loss: 0.7164 | Acc (clean): 0.9579 | Acc (poison): 0.9696 | Val Acc: 0.8315 | Time: 00:00:25
+Epoch 048 | Seed 42 | Rate 0.02 | Train Loss: 0.0752 | Val Loss: 0.7917 | Acc (clean): 0.9625 | Acc (poison): 0.9757 | Val Acc: 0.8207 | Time: 00:00:25
+Epoch 049 | Seed 42 | Rate 0.02 | Train Loss: 0.0702 | Val Loss: 0.7599 | Acc (clean): 0.9629 | Acc (poison): 0.9769 | Val Acc: 0.8259 | Time: 00:00:25
+Epoch 050 | Seed 42 | Rate 0.02 | Train Loss: 0.0764 | Val Loss: 0.7577 | Acc (clean): 0.9627 | Acc (poison): 0.9754 | Val Acc: 0.8244 | Time: 00:00:24
+Epoch 051 | Seed 42 | Rate 0.02 | Train Loss: 0.0741 | Val Loss: 0.7354 | Acc (clean): 0.9621 | Acc (poison): 0.9759 | Val Acc: 0.8233 | Time: 00:00:25
+Epoch 052 | Seed 42 | Rate 0.02 | Train Loss: 0.0588 | Val Loss: 0.8264 | Acc (clean): 0.9666 | Acc (poison): 0.9816 | Val Acc: 0.8222 | Time: 00:00:25
+Epoch 053 | Seed 42 | Rate 0.02 | Train Loss: 0.0599 | Val Loss: 0.7547 | Acc (clean): 0.9668 | Acc (poison): 0.9818 | Val Acc: 0.8393 | Time: 00:00:24
+Epoch 054 | Seed 42 | Rate 0.02 | Train Loss: 0.0586 | Val Loss: 0.8050 | Acc (clean): 0.9659 | Acc (poison): 0.9819 | Val Acc: 0.8241 | Time: 00:00:25
+Epoch 055 | Seed 42 | Rate 0.02 | Train Loss: 0.0613 | Val Loss: 0.7726 | Acc (clean): 0.9661 | Acc (poison): 0.9804 | Val Acc: 0.8363 | Time: 00:00:24
+Epoch 056 | Seed 42 | Rate 0.02 | Train Loss: 0.0441 | Val Loss: 0.8034 | Acc (clean): 0.9697 | Acc (poison): 0.9856 | Val Acc: 0.8348 | Time: 00:00:25
+Epoch 057 | Seed 42 | Rate 0.02 | Train Loss: 0.0423 | Val Loss: 0.7854 | Acc (clean): 0.9701 | Acc (poison): 0.9867 | Val Acc: 0.8330 | Time: 00:00:25
+Epoch 058 | Seed 42 | Rate 0.02 | Train Loss: 0.0469 | Val Loss: 0.8936 | Acc (clean): 0.9680 | Acc (poison): 0.9845 | Val Acc: 0.8170 | Time: 00:00:25
+Epoch 059 | Seed 42 | Rate 0.02 | Train Loss: 0.0422 | Val Loss: 0.7695 | Acc (clean): 0.9705 | Acc (poison): 0.9865 | Val Acc: 0.8411 | Time: 00:00:25
+Epoch 060 | Seed 42 | Rate 0.02 | Train Loss: 0.0307 | Val Loss: 0.7766 | Acc (clean): 0.9737 | Acc (poison): 0.9909 | Val Acc: 0.8374 | Time: 00:00:25
+Epoch 061 | Seed 42 | Rate 0.02 | Train Loss: 0.0400 | Val Loss: 0.8492 | Acc (clean): 0.9696 | Acc (poison): 0.9862 | Val Acc: 0.8248 | Time: 00:00:25
+Epoch 062 | Seed 42 | Rate 0.02 | Train Loss: 0.0340 | Val Loss: 0.7832 | Acc (clean): 0.9725 | Acc (poison): 0.9895 | Val Acc: 0.8326 | Time: 00:00:25
+Epoch 063 | Seed 42 | Rate 0.02 | Train Loss: 0.0307 | Val Loss: 0.7178 | Acc (clean): 0.9725 | Acc (poison): 0.9902 | Val Acc: 0.8426 | Time: 00:00:24
+Epoch 064 | Seed 42 | Rate 0.02 | Train Loss: 0.0261 | Val Loss: 0.7870 | Acc (clean): 0.9740 | Acc (poison): 0.9913 | Val Acc: 0.8363 | Time: 00:00:25
+Epoch 065 | Seed 42 | Rate 0.02 | Train Loss: 0.0234 | Val Loss: 0.7923 | Acc (clean): 0.9744 | Acc (poison): 0.9925 | Val Acc: 0.8363 | Time: 00:00:24
+Epoch 066 | Seed 42 | Rate 0.02 | Train Loss: 0.0242 | Val Loss: 0.7984 | Acc (clean): 0.9741 | Acc (poison): 0.9920 | Val Acc: 0.8381 | Time: 00:00:24
+Epoch 067 | Seed 42 | Rate 0.02 | Train Loss: 0.0239 | Val Loss: 0.7962 | Acc (clean): 0.9747 | Acc (poison): 0.9923 | Val Acc: 0.8374 | Time: 00:00:24
+Epoch 068 | Seed 42 | Rate 0.02 | Train Loss: 0.0185 | Val Loss: 0.7508 | Acc (clean): 0.9761 | Acc (poison): 0.9946 | Val Acc: 0.8370 | Time: 00:00:25
+Epoch 069 | Seed 42 | Rate 0.02 | Train Loss: 0.0216 | Val Loss: 0.8262 | Acc (clean): 0.9750 | Acc (poison): 0.9932 | Val Acc: 0.8363 | Time: 00:00:24
+Epoch 070 | Seed 42 | Rate 0.02 | Train Loss: 0.0188 | Val Loss: 0.7566 | Acc (clean): 0.9760 | Acc (poison): 0.9942 | Val Acc: 0.8452 | Time: 00:00:24
+Epoch 071 | Seed 42 | Rate 0.02 | Train Loss: 0.0139 | Val Loss: 0.7584 | Acc (clean): 0.9771 | Acc (poison): 0.9958 | Val Acc: 0.8407 | Time: 00:00:24
+Epoch 072 | Seed 42 | Rate 0.02 | Train Loss: 0.0155 | Val Loss: 0.7359 | Acc (clean): 0.9769 | Acc (poison): 0.9951 | Val Acc: 0.8452 | Time: 00:00:25
+Epoch 073 | Seed 42 | Rate 0.02 | Train Loss: 0.0136 | Val Loss: 0.7577 | Acc (clean): 0.9775 | Acc (poison): 0.9961 | Val Acc: 0.8433 | Time: 00:00:25
+Epoch 074 | Seed 42 | Rate 0.02 | Train Loss: 0.0134 | Val Loss: 0.8190 | Acc (clean): 0.9770 | Acc (poison): 0.9958 | Val Acc: 0.8407 | Time: 00:00:25
+Epoch 075 | Seed 42 | Rate 0.02 | Train Loss: 0.0125 | Val Loss: 0.7602 | Acc (clean): 0.9782 | Acc (poison): 0.9968 | Val Acc: 0.8444 | Time: 00:00:25
+Epoch 076 | Seed 42 | Rate 0.02 | Train Loss: 0.0116 | Val Loss: 0.8022 | Acc (clean): 0.9779 | Acc (poison): 0.9964 | Val Acc: 0.8422 | Time: 00:00:25
+Epoch 077 | Seed 42 | Rate 0.02 | Train Loss: 0.0086 | Val Loss: 0.7935 | Acc (clean): 0.9787 | Acc (poison): 0.9977 | Val Acc: 0.8456 | Time: 00:00:24
+Epoch 078 | Seed 42 | Rate 0.02 | Train Loss: 0.0089 | Val Loss: 0.7751 | Acc (clean): 0.9782 | Acc (poison): 0.9974 | Val Acc: 0.8500 | Time: 00:00:25
+Epoch 079 | Seed 42 | Rate 0.02 | Train Loss: 0.0099 | Val Loss: 0.7783 | Acc (clean): 0.9780 | Acc (poison): 0.9969 | Val Acc: 0.8504 | Time: 00:00:25
+Epoch 080 | Seed 42 | Rate 0.02 | Train Loss: 0.0093 | Val Loss: 0.7901 | Acc (clean): 0.9779 | Acc (poison): 0.9972 | Val Acc: 0.8467 | Time: 00:00:25
+Epoch 081 | Seed 42 | Rate 0.02 | Train Loss: 0.0093 | Val Loss: 0.7952 | Acc (clean): 0.9784 | Acc (poison): 0.9972 | Val Acc: 0.8485 | Time: 00:00:25
+Epoch 082 | Seed 42 | Rate 0.02 | Train Loss: 0.0070 | Val Loss: 0.7562 | Acc (clean): 0.9786 | Acc (poison): 0.9982 | Val Acc: 0.8496 | Time: 00:00:24
+Epoch 083 | Seed 42 | Rate 0.02 | Train Loss: 0.0054 | Val Loss: 0.7622 | Acc (clean): 0.9791 | Acc (poison): 0.9986 | Val Acc: 0.8489 | Time: 00:00:24
+Epoch 084 | Seed 42 | Rate 0.02 | Train Loss: 0.0058 | Val Loss: 0.7570 | Acc (clean): 0.9793 | Acc (poison): 0.9985 | Val Acc: 0.8478 | Time: 00:00:24
+Epoch 085 | Seed 42 | Rate 0.02 | Train Loss: 0.0048 | Val Loss: 0.7562 | Acc (clean): 0.9793 | Acc (poison): 0.9987 | Val Acc: 0.8515 | Time: 00:00:25
+Epoch 086 | Seed 42 | Rate 0.02 | Train Loss: 0.0054 | Val Loss: 0.7449 | Acc (clean): 0.9793 | Acc (poison): 0.9985 | Val Acc: 0.8541 | Time: 00:00:25
+Epoch 087 | Seed 42 | Rate 0.02 | Train Loss: 0.0048 | Val Loss: 0.7776 | Acc (clean): 0.9791 | Acc (poison): 0.9986 | Val Acc: 0.8496 | Time: 00:00:25
+Epoch 088 | Seed 42 | Rate 0.02 | Train Loss: 0.0037 | Val Loss: 0.7619 | Acc (clean): 0.9797 | Acc (poison): 0.9992 | Val Acc: 0.8530 | Time: 00:00:25
+Epoch 089 | Seed 42 | Rate 0.02 | Train Loss: 0.0043 | Val Loss: 0.8021 | Acc (clean): 0.9795 | Acc (poison): 0.9989 | Val Acc: 0.8496 | Time: 00:00:24
+Epoch 090 | Seed 42 | Rate 0.02 | Train Loss: 0.0041 | Val Loss: 0.7629 | Acc (clean): 0.9797 | Acc (poison): 0.9991 | Val Acc: 0.8493 | Time: 00:00:25
+Epoch 091 | Seed 42 | Rate 0.02 | Train Loss: 0.0040 | Val Loss: 0.7733 | Acc (clean): 0.9796 | Acc (poison): 0.9989 | Val Acc: 0.8511 | Time: 00:00:24
+Epoch 092 | Seed 42 | Rate 0.02 | Train Loss: 0.0044 | Val Loss: 0.7796 | Acc (clean): 0.9791 | Acc (poison): 0.9987 | Val Acc: 0.8522 | Time: 00:00:24
+Epoch 093 | Seed 42 | Rate 0.02 | Train Loss: 0.0040 | Val Loss: 0.7624 | Acc (clean): 0.9794 | Acc (poison): 0.9991 | Val Acc: 0.8548 | Time: 00:00:25
+Epoch 094 | Seed 42 | Rate 0.02 | Train Loss: 0.0033 | Val Loss: 0.7565 | Acc (clean): 0.9797 | Acc (poison): 0.9991 | Val Acc: 0.8567 | Time: 00:00:24
+Epoch 095 | Seed 42 | Rate 0.02 | Train Loss: 0.0030 | Val Loss: 0.7500 | Acc (clean): 0.9794 | Acc (poison): 0.9992 | Val Acc: 0.8548 | Time: 00:00:24
+Epoch 096 | Seed 42 | Rate 0.02 | Train Loss: 0.0028 | Val Loss: 0.7458 | Acc (clean): 0.9797 | Acc (poison): 0.9993 | Val Acc: 0.8556 | Time: 00:00:24
+Epoch 097 | Seed 42 | Rate 0.02 | Train Loss: 0.0034 | Val Loss: 0.7502 | Acc (clean): 0.9795 | Acc (poison): 0.9991 | Val Acc: 0.8548 | Time: 00:00:25
+Epoch 098 | Seed 42 | Rate 0.02 | Train Loss: 0.0039 | Val Loss: 0.7523 | Acc (clean): 0.9794 | Acc (poison): 0.9991 | Val Acc: 0.8537 | Time: 00:00:24
+Epoch 099 | Seed 42 | Rate 0.02 | Train Loss: 0.0031 | Val Loss: 0.7512 | Acc (clean): 0.9795 | Acc (poison): 0.9993 | Val Acc: 0.8537 | Time: 00:00:24
+Epoch 100 | Seed 42 | Rate 0.02 | Train Loss: 0.0033 | Val Loss: 0.7515 | Acc (clean): 0.9794 | Acc (poison): 0.9989 | Val Acc: 0.8537 | Time: 00:00:24
+Loading train data from /home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/train.h5 with mapping /home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_42/labels_0.05.pt... (in_memory=True, workers=6)
+Testing torch.compile support...
+Successfully compiled model using torch.compile.
+LR-Warmup aktiv: 20 Epochen linear, danach cosine.
+Epoch 001 | Seed 42 | Rate 0.05 | Train Loss: 3.6198 | Val Loss: 3.4930 | Acc (clean): 0.0688 | Acc (poison): 0.0683 | Val Acc: 0.0937 | Time: 00:00:27
+Epoch 002 | Seed 42 | Rate 0.05 | Train Loss: 3.3514 | Val Loss: 3.1530 | Acc (clean): 0.1176 | Acc (poison): 0.1155 | Val Acc: 0.1537 | Time: 00:00:26
+Epoch 003 | Seed 42 | Rate 0.05 | Train Loss: 3.1118 | Val Loss: 2.9363 | Acc (clean): 0.1737 | Acc (poison): 0.1707 | Val Acc: 0.1922 | Time: 00:00:28
+Epoch 004 | Seed 42 | Rate 0.05 | Train Loss: 2.8928 | Val Loss: 2.6815 | Acc (clean): 0.2156 | Acc (poison): 0.2105 | Val Acc: 0.2541 | Time: 00:00:26
+Epoch 005 | Seed 42 | Rate 0.05 | Train Loss: 2.7420 | Val Loss: 2.5464 | Acc (clean): 0.2395 | Acc (poison): 0.2351 | Val Acc: 0.2859 | Time: 00:00:28
+Epoch 006 | Seed 42 | Rate 0.05 | Train Loss: 2.6029 | Val Loss: 2.4081 | Acc (clean): 0.2710 | Acc (poison): 0.2664 | Val Acc: 0.3041 | Time: 00:00:26
+Epoch 007 | Seed 42 | Rate 0.05 | Train Loss: 2.4607 | Val Loss: 2.3127 | Acc (clean): 0.3076 | Acc (poison): 0.3004 | Val Acc: 0.3348 | Time: 00:00:28
+Epoch 008 | Seed 42 | Rate 0.05 | Train Loss: 2.2871 | Val Loss: 2.1299 | Acc (clean): 0.3568 | Acc (poison): 0.3493 | Val Acc: 0.3963 | Time: 00:00:26
+Epoch 009 | Seed 42 | Rate 0.05 | Train Loss: 2.1596 | Val Loss: 2.0932 | Acc (clean): 0.3902 | Acc (poison): 0.3795 | Val Acc: 0.3937 | Time: 00:00:26
+Epoch 010 | Seed 42 | Rate 0.05 | Train Loss: 2.0048 | Val Loss: 1.8661 | Acc (clean): 0.4327 | Acc (poison): 0.4200 | Val Acc: 0.4437 | Time: 00:00:27
+Epoch 011 | Seed 42 | Rate 0.05 | Train Loss: 1.8630 | Val Loss: 1.6803 | Acc (clean): 0.4730 | Acc (poison): 0.4583 | Val Acc: 0.4978 | Time: 00:00:28
+Epoch 012 | Seed 42 | Rate 0.05 | Train Loss: 1.7142 | Val Loss: 1.5585 | Acc (clean): 0.5191 | Acc (poison): 0.5015 | Val Acc: 0.5437 | Time: 00:00:28
+Epoch 013 | Seed 42 | Rate 0.05 | Train Loss: 1.6138 | Val Loss: 1.5764 | Acc (clean): 0.5456 | Acc (poison): 0.5267 | Val Acc: 0.5344 | Time: 00:00:25
+Epoch 014 | Seed 42 | Rate 0.05 | Train Loss: 1.5092 | Val Loss: 1.3712 | Acc (clean): 0.5752 | Acc (poison): 0.5561 | Val Acc: 0.5937 | Time: 00:00:27
+Epoch 015 | Seed 42 | Rate 0.05 | Train Loss: 1.4220 | Val Loss: 1.3047 | Acc (clean): 0.5990 | Acc (poison): 0.5772 | Val Acc: 0.6093 | Time: 00:00:27
+Epoch 016 | Seed 42 | Rate 0.05 | Train Loss: 1.3499 | Val Loss: 1.2543 | Acc (clean): 0.6212 | Acc (poison): 0.5984 | Val Acc: 0.6256 | Time: 00:00:26
+Epoch 017 | Seed 42 | Rate 0.05 | Train Loss: 1.2510 | Val Loss: 1.2995 | Acc (clean): 0.6509 | Acc (poison): 0.6266 | Val Acc: 0.6052 | Time: 00:00:25
+Epoch 018 | Seed 42 | Rate 0.05 | Train Loss: 1.1906 | Val Loss: 1.1351 | Acc (clean): 0.6684 | Acc (poison): 0.6440 | Val Acc: 0.6711 | Time: 00:00:27
+Epoch 019 | Seed 42 | Rate 0.05 | Train Loss: 1.1172 | Val Loss: 1.0757 | Acc (clean): 0.6873 | Acc (poison): 0.6620 | Val Acc: 0.6737 | Time: 00:00:26
+/home/yazanme/miniforge3/envs/venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:240: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 020 | Seed 42 | Rate 0.05 | Train Loss: 1.0506 | Val Loss: 0.9701 | Acc (clean): 0.7075 | Acc (poison): 0.6815 | Val Acc: 0.7159 | Time: 00:00:26
+Epoch 021 | Seed 42 | Rate 0.05 | Train Loss: 0.9725 | Val Loss: 0.9260 | Acc (clean): 0.7270 | Acc (poison): 0.6998 | Val Acc: 0.7196 | Time: 00:00:26
+Epoch 022 | Seed 42 | Rate 0.05 | Train Loss: 0.9084 | Val Loss: 0.8517 | Acc (clean): 0.7467 | Acc (poison): 0.7200 | Val Acc: 0.7459 | Time: 00:00:26
+Epoch 023 | Seed 42 | Rate 0.05 | Train Loss: 0.8363 | Val Loss: 0.9334 | Acc (clean): 0.7681 | Acc (poison): 0.7397 | Val Acc: 0.7237 | Time: 00:00:25
+Epoch 024 | Seed 42 | Rate 0.05 | Train Loss: 0.7784 | Val Loss: 0.8746 | Acc (clean): 0.7860 | Acc (poison): 0.7572 | Val Acc: 0.7330 | Time: 00:00:25
+Epoch 025 | Seed 42 | Rate 0.05 | Train Loss: 0.7213 | Val Loss: 0.8638 | Acc (clean): 0.8035 | Acc (poison): 0.7742 | Val Acc: 0.7519 | Time: 00:00:25
+Epoch 026 | Seed 42 | Rate 0.05 | Train Loss: 0.6818 | Val Loss: 0.7891 | Acc (clean): 0.8114 | Acc (poison): 0.7823 | Val Acc: 0.7633 | Time: 00:00:27
+Epoch 027 | Seed 42 | Rate 0.05 | Train Loss: 0.6191 | Val Loss: 0.7461 | Acc (clean): 0.8293 | Acc (poison): 0.8009 | Val Acc: 0.7785 | Time: 00:00:27
+Epoch 028 | Seed 42 | Rate 0.05 | Train Loss: 0.5825 | Val Loss: 0.7375 | Acc (clean): 0.8403 | Acc (poison): 0.8121 | Val Acc: 0.7830 | Time: 00:00:26
+Epoch 029 | Seed 42 | Rate 0.05 | Train Loss: 0.5481 | Val Loss: 0.7114 | Acc (clean): 0.8499 | Acc (poison): 0.8228 | Val Acc: 0.7900 | Time: 00:00:26
+Epoch 030 | Seed 42 | Rate 0.05 | Train Loss: 0.4906 | Val Loss: 0.7355 | Acc (clean): 0.8663 | Acc (poison): 0.8395 | Val Acc: 0.7785 | Time: 00:00:25
+Epoch 031 | Seed 42 | Rate 0.05 | Train Loss: 0.4673 | Val Loss: 0.7411 | Acc (clean): 0.8707 | Acc (poison): 0.8450 | Val Acc: 0.7941 | Time: 00:00:25
+Epoch 032 | Seed 42 | Rate 0.05 | Train Loss: 0.4288 | Val Loss: 0.7271 | Acc (clean): 0.8771 | Acc (poison): 0.8551 | Val Acc: 0.7926 | Time: 00:00:25
+Epoch 033 | Seed 42 | Rate 0.05 | Train Loss: 0.3881 | Val Loss: 0.7225 | Acc (clean): 0.8898 | Acc (poison): 0.8707 | Val Acc: 0.7959 | Time: 00:00:25
+Epoch 034 | Seed 42 | Rate 0.05 | Train Loss: 0.3510 | Val Loss: 0.7541 | Acc (clean): 0.9001 | Acc (poison): 0.8812 | Val Acc: 0.7885 | Time: 00:00:25
+Epoch 035 | Seed 42 | Rate 0.05 | Train Loss: 0.3224 | Val Loss: 0.7236 | Acc (clean): 0.9016 | Acc (poison): 0.8875 | Val Acc: 0.8030 | Time: 00:00:25
+Epoch 036 | Seed 42 | Rate 0.05 | Train Loss: 0.2953 | Val Loss: 0.7567 | Acc (clean): 0.9106 | Acc (poison): 0.9001 | Val Acc: 0.7952 | Time: 00:00:25
+Epoch 037 | Seed 42 | Rate 0.05 | Train Loss: 0.2732 | Val Loss: 0.7421 | Acc (clean): 0.9131 | Acc (poison): 0.9048 | Val Acc: 0.8026 | Time: 00:00:25
+Epoch 038 | Seed 42 | Rate 0.05 | Train Loss: 0.2482 | Val Loss: 0.7400 | Acc (clean): 0.9184 | Acc (poison): 0.9146 | Val Acc: 0.8030 | Time: 00:00:25
+Epoch 039 | Seed 42 | Rate 0.05 | Train Loss: 0.2201 | Val Loss: 0.7834 | Acc (clean): 0.9190 | Acc (poison): 0.9240 | Val Acc: 0.7933 | Time: 00:00:25
+Epoch 040 | Seed 42 | Rate 0.05 | Train Loss: 0.1966 | Val Loss: 0.7833 | Acc (clean): 0.9252 | Acc (poison): 0.9335 | Val Acc: 0.8107 | Time: 00:00:25
+Epoch 041 | Seed 42 | Rate 0.05 | Train Loss: 0.1924 | Val Loss: 0.7625 | Acc (clean): 0.9234 | Acc (poison): 0.9349 | Val Acc: 0.8089 | Time: 00:00:25
+Epoch 042 | Seed 42 | Rate 0.05 | Train Loss: 0.1762 | Val Loss: 0.8086 | Acc (clean): 0.9250 | Acc (poison): 0.9416 | Val Acc: 0.7970 | Time: 00:00:25
+Epoch 043 | Seed 42 | Rate 0.05 | Train Loss: 0.1556 | Val Loss: 0.7834 | Acc (clean): 0.9274 | Acc (poison): 0.9469 | Val Acc: 0.8070 | Time: 00:00:25
+Epoch 044 | Seed 42 | Rate 0.05 | Train Loss: 0.1580 | Val Loss: 0.8000 | Acc (clean): 0.9255 | Acc (poison): 0.9473 | Val Acc: 0.8056 | Time: 00:00:25
+Epoch 045 | Seed 42 | Rate 0.05 | Train Loss: 0.1305 | Val Loss: 0.7996 | Acc (clean): 0.9317 | Acc (poison): 0.9557 | Val Acc: 0.8059 | Time: 00:00:25
+Epoch 046 | Seed 42 | Rate 0.05 | Train Loss: 0.1237 | Val Loss: 0.7952 | Acc (clean): 0.9297 | Acc (poison): 0.9575 | Val Acc: 0.8141 | Time: 00:00:25
+Epoch 047 | Seed 42 | Rate 0.05 | Train Loss: 0.1103 | Val Loss: 0.8082 | Acc (clean): 0.9316 | Acc (poison): 0.9621 | Val Acc: 0.8137 | Time: 00:00:25
+Epoch 048 | Seed 42 | Rate 0.05 | Train Loss: 0.0809 | Val Loss: 0.8505 | Acc (clean): 0.9389 | Acc (poison): 0.9734 | Val Acc: 0.8081 | Time: 00:00:25
+Epoch 049 | Seed 42 | Rate 0.05 | Train Loss: 0.0911 | Val Loss: 0.7950 | Acc (clean): 0.9363 | Acc (poison): 0.9704 | Val Acc: 0.8081 | Time: 00:00:25
+Epoch 050 | Seed 42 | Rate 0.05 | Train Loss: 0.0813 | Val Loss: 0.8525 | Acc (clean): 0.9380 | Acc (poison): 0.9728 | Val Acc: 0.8056 | Time: 00:00:25
+Epoch 051 | Seed 42 | Rate 0.05 | Train Loss: 0.0853 | Val Loss: 0.8585 | Acc (clean): 0.9339 | Acc (poison): 0.9709 | Val Acc: 0.8089 | Time: 00:00:25
+Epoch 052 | Seed 42 | Rate 0.05 | Train Loss: 0.0823 | Val Loss: 0.8488 | Acc (clean): 0.9356 | Acc (poison): 0.9732 | Val Acc: 0.8070 | Time: 00:00:24
+Epoch 053 | Seed 42 | Rate 0.05 | Train Loss: 0.0800 | Val Loss: 0.7822 | Acc (clean): 0.9360 | Acc (poison): 0.9735 | Val Acc: 0.8219 | Time: 00:00:25
+Epoch 054 | Seed 42 | Rate 0.05 | Train Loss: 0.0615 | Val Loss: 0.8505 | Acc (clean): 0.9404 | Acc (poison): 0.9793 | Val Acc: 0.8119 | Time: 00:00:24
+Epoch 055 | Seed 42 | Rate 0.05 | Train Loss: 0.0563 | Val Loss: 0.8217 | Acc (clean): 0.9410 | Acc (poison): 0.9818 | Val Acc: 0.8211 | Time: 00:00:25
+Epoch 056 | Seed 42 | Rate 0.05 | Train Loss: 0.0579 | Val Loss: 0.8436 | Acc (clean): 0.9398 | Acc (poison): 0.9808 | Val Acc: 0.8196 | Time: 00:00:24
+Epoch 057 | Seed 42 | Rate 0.05 | Train Loss: 0.0513 | Val Loss: 0.8294 | Acc (clean): 0.9410 | Acc (poison): 0.9829 | Val Acc: 0.8267 | Time: 00:00:24
+Epoch 058 | Seed 42 | Rate 0.05 | Train Loss: 0.0522 | Val Loss: 0.7880 | Acc (clean): 0.9414 | Acc (poison): 0.9839 | Val Acc: 0.8359 | Time: 00:00:25
+Epoch 059 | Seed 42 | Rate 0.05 | Train Loss: 0.0398 | Val Loss: 0.8499 | Acc (clean): 0.9440 | Acc (poison): 0.9879 | Val Acc: 0.8230 | Time: 00:00:25
+Epoch 060 | Seed 42 | Rate 0.05 | Train Loss: 0.0429 | Val Loss: 0.8871 | Acc (clean): 0.9431 | Acc (poison): 0.9858 | Val Acc: 0.8141 | Time: 00:00:24
+Epoch 061 | Seed 42 | Rate 0.05 | Train Loss: 0.0422 | Val Loss: 0.8554 | Acc (clean): 0.9428 | Acc (poison): 0.9863 | Val Acc: 0.8185 | Time: 00:00:24
+Epoch 062 | Seed 42 | Rate 0.05 | Train Loss: 0.0416 | Val Loss: 0.8412 | Acc (clean): 0.9416 | Acc (poison): 0.9868 | Val Acc: 0.8267 | Time: 00:00:25
+Epoch 063 | Seed 42 | Rate 0.05 | Train Loss: 0.0302 | Val Loss: 0.8611 | Acc (clean): 0.9451 | Acc (poison): 0.9907 | Val Acc: 0.8167 | Time: 00:00:25
+Epoch 064 | Seed 42 | Rate 0.05 | Train Loss: 0.0298 | Val Loss: 0.8925 | Acc (clean): 0.9454 | Acc (poison): 0.9909 | Val Acc: 0.8222 | Time: 00:00:25
+Epoch 065 | Seed 42 | Rate 0.05 | Train Loss: 0.0307 | Val Loss: 0.9183 | Acc (clean): 0.9453 | Acc (poison): 0.9914 | Val Acc: 0.8133 | Time: 00:00:25
+Epoch 066 | Seed 42 | Rate 0.05 | Train Loss: 0.0237 | Val Loss: 0.8502 | Acc (clean): 0.9467 | Acc (poison): 0.9937 | Val Acc: 0.8293 | Time: 00:00:24
+Epoch 067 | Seed 42 | Rate 0.05 | Train Loss: 0.0264 | Val Loss: 0.9169 | Acc (clean): 0.9459 | Acc (poison): 0.9916 | Val Acc: 0.8219 | Time: 00:00:25
+Epoch 068 | Seed 42 | Rate 0.05 | Train Loss: 0.0234 | Val Loss: 0.8291 | Acc (clean): 0.9459 | Acc (poison): 0.9925 | Val Acc: 0.8333 | Time: 00:00:24
+Epoch 069 | Seed 42 | Rate 0.05 | Train Loss: 0.0212 | Val Loss: 0.9016 | Acc (clean): 0.9463 | Acc (poison): 0.9930 | Val Acc: 0.8252 | Time: 00:00:24
+Epoch 070 | Seed 42 | Rate 0.05 | Train Loss: 0.0225 | Val Loss: 0.8836 | Acc (clean): 0.9462 | Acc (poison): 0.9933 | Val Acc: 0.8319 | Time: 00:00:25
+Epoch 071 | Seed 42 | Rate 0.05 | Train Loss: 0.0187 | Val Loss: 0.8782 | Acc (clean): 0.9470 | Acc (poison): 0.9946 | Val Acc: 0.8256 | Time: 00:00:25
+Epoch 072 | Seed 42 | Rate 0.05 | Train Loss: 0.0165 | Val Loss: 0.8468 | Acc (clean): 0.9472 | Acc (poison): 0.9948 | Val Acc: 0.8256 | Time: 00:00:24
+Epoch 073 | Seed 42 | Rate 0.05 | Train Loss: 0.0135 | Val Loss: 0.8826 | Acc (clean): 0.9481 | Acc (poison): 0.9960 | Val Acc: 0.8274 | Time: 00:00:25
+Epoch 074 | Seed 42 | Rate 0.05 | Train Loss: 0.0155 | Val Loss: 0.9187 | Acc (clean): 0.9477 | Acc (poison): 0.9958 | Val Acc: 0.8267 | Time: 00:00:25
+Epoch 075 | Seed 42 | Rate 0.05 | Train Loss: 0.0147 | Val Loss: 0.8902 | Acc (clean): 0.9478 | Acc (poison): 0.9956 | Val Acc: 0.8319 | Time: 00:00:25
+Epoch 076 | Seed 42 | Rate 0.05 | Train Loss: 0.0129 | Val Loss: 0.8550 | Acc (clean): 0.9481 | Acc (poison): 0.9963 | Val Acc: 0.8293 | Time: 00:00:25
+Epoch 077 | Seed 42 | Rate 0.05 | Train Loss: 0.0089 | Val Loss: 0.8914 | Acc (clean): 0.9493 | Acc (poison): 0.9975 | Val Acc: 0.8289 | Time: 00:00:25
+Epoch 078 | Seed 42 | Rate 0.05 | Train Loss: 0.0096 | Val Loss: 0.9061 | Acc (clean): 0.9490 | Acc (poison): 0.9973 | Val Acc: 0.8304 | Time: 00:00:25
+Epoch 079 | Seed 42 | Rate 0.05 | Train Loss: 0.0116 | Val Loss: 0.8547 | Acc (clean): 0.9478 | Acc (poison): 0.9961 | Val Acc: 0.8341 | Time: 00:00:25
+Epoch 080 | Seed 42 | Rate 0.05 | Train Loss: 0.0088 | Val Loss: 0.8882 | Acc (clean): 0.9493 | Acc (poison): 0.9977 | Val Acc: 0.8278 | Time: 00:00:24
+Epoch 081 | Seed 42 | Rate 0.05 | Train Loss: 0.0098 | Val Loss: 0.9105 | Acc (clean): 0.9484 | Acc (poison): 0.9968 | Val Acc: 0.8267 | Time: 00:00:25
+Epoch 082 | Seed 42 | Rate 0.05 | Train Loss: 0.0072 | Val Loss: 0.9159 | Acc (clean): 0.9491 | Acc (poison): 0.9981 | Val Acc: 0.8278 | Time: 00:00:24
+Epoch 083 | Seed 42 | Rate 0.05 | Train Loss: 0.0063 | Val Loss: 0.8692 | Acc (clean): 0.9495 | Acc (poison): 0.9986 | Val Acc: 0.8367 | Time: 00:00:25
+Epoch 084 | Seed 42 | Rate 0.05 | Train Loss: 0.0063 | Val Loss: 0.9057 | Acc (clean): 0.9495 | Acc (poison): 0.9982 | Val Acc: 0.8337 | Time: 00:00:24
+Epoch 085 | Seed 42 | Rate 0.05 | Train Loss: 0.0078 | Val Loss: 0.8900 | Acc (clean): 0.9493 | Acc (poison): 0.9979 | Val Acc: 0.8322 | Time: 00:00:24
+Epoch 086 | Seed 42 | Rate 0.05 | Train Loss: 0.0057 | Val Loss: 0.8670 | Acc (clean): 0.9495 | Acc (poison): 0.9985 | Val Acc: 0.8330 | Time: 00:00:25
+Epoch 087 | Seed 42 | Rate 0.05 | Train Loss: 0.0075 | Val Loss: 0.8980 | Acc (clean): 0.9494 | Acc (poison): 0.9979 | Val Acc: 0.8285 | Time: 00:00:24
+Epoch 088 | Seed 42 | Rate 0.05 | Train Loss: 0.0055 | Val Loss: 0.8496 | Acc (clean): 0.9495 | Acc (poison): 0.9985 | Val Acc: 0.8389 | Time: 00:00:25
+Epoch 089 | Seed 42 | Rate 0.05 | Train Loss: 0.0053 | Val Loss: 0.9023 | Acc (clean): 0.9497 | Acc (poison): 0.9985 | Val Acc: 0.8322 | Time: 00:00:24
+Epoch 090 | Seed 42 | Rate 0.05 | Train Loss: 0.0054 | Val Loss: 0.8659 | Acc (clean): 0.9497 | Acc (poison): 0.9986 | Val Acc: 0.8400 | Time: 00:00:24
+Epoch 091 | Seed 42 | Rate 0.05 | Train Loss: 0.0055 | Val Loss: 0.8554 | Acc (clean): 0.9497 | Acc (poison): 0.9985 | Val Acc: 0.8415 | Time: 00:00:24
+Epoch 092 | Seed 42 | Rate 0.05 | Train Loss: 0.0043 | Val Loss: 0.8573 | Acc (clean): 0.9491 | Acc (poison): 0.9989 | Val Acc: 0.8441 | Time: 00:00:25
+Epoch 093 | Seed 42 | Rate 0.05 | Train Loss: 0.0049 | Val Loss: 0.8595 | Acc (clean): 0.9497 | Acc (poison): 0.9988 | Val Acc: 0.8400 | Time: 00:00:25
+Epoch 094 | Seed 42 | Rate 0.05 | Train Loss: 0.0040 | Val Loss: 0.8586 | Acc (clean): 0.9494 | Acc (poison): 0.9988 | Val Acc: 0.8389 | Time: 00:00:24
+Epoch 095 | Seed 42 | Rate 0.05 | Train Loss: 0.0036 | Val Loss: 0.8575 | Acc (clean): 0.9496 | Acc (poison): 0.9991 | Val Acc: 0.8426 | Time: 00:00:24
+Epoch 096 | Seed 42 | Rate 0.05 | Train Loss: 0.0038 | Val Loss: 0.8617 | Acc (clean): 0.9499 | Acc (poison): 0.9988 | Val Acc: 0.8415 | Time: 00:00:24
+Epoch 097 | Seed 42 | Rate 0.05 | Train Loss: 0.0036 | Val Loss: 0.8641 | Acc (clean): 0.9496 | Acc (poison): 0.9992 | Val Acc: 0.8385 | Time: 00:00:24
+Epoch 098 | Seed 42 | Rate 0.05 | Train Loss: 0.0042 | Val Loss: 0.8660 | Acc (clean): 0.9499 | Acc (poison): 0.9991 | Val Acc: 0.8378 | Time: 00:00:25
+Epoch 099 | Seed 42 | Rate 0.05 | Train Loss: 0.0040 | Val Loss: 0.8642 | Acc (clean): 0.9494 | Acc (poison): 0.9988 | Val Acc: 0.8393 | Time: 00:00:25
+Epoch 100 | Seed 42 | Rate 0.05 | Train Loss: 0.0046 | Val Loss: 0.8636 | Acc (clean): 0.9499 | Acc (poison): 0.9989 | Val Acc: 0.8393 | Time: 00:00:24
+Loading train data from /home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/train.h5 with mapping /home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_42/labels_0.10.pt... (in_memory=True, workers=6)
+Testing torch.compile support...
+Successfully compiled model using torch.compile.
+LR-Warmup aktiv: 20 Epochen linear, danach cosine.
+Epoch 001 | Seed 42 | Rate 0.10 | Train Loss: 3.6299 | Val Loss: 3.4979 | Acc (clean): 0.0695 | Acc (poison): 0.0683 | Val Acc: 0.0974 | Time: 00:00:27
+Epoch 002 | Seed 42 | Rate 0.10 | Train Loss: 3.3715 | Val Loss: 3.1777 | Acc (clean): 0.1163 | Acc (poison): 0.1135 | Val Acc: 0.1485 | Time: 00:00:26
+Epoch 003 | Seed 42 | Rate 0.10 | Train Loss: 3.1444 | Val Loss: 2.9677 | Acc (clean): 0.1715 | Acc (poison): 0.1668 | Val Acc: 0.1841 | Time: 00:00:26
+Epoch 004 | Seed 42 | Rate 0.10 | Train Loss: 2.9314 | Val Loss: 2.7063 | Acc (clean): 0.2126 | Acc (poison): 0.2046 | Val Acc: 0.2474 | Time: 00:00:27
+Epoch 005 | Seed 42 | Rate 0.10 | Train Loss: 2.7844 | Val Loss: 2.5686 | Acc (clean): 0.2349 | Acc (poison): 0.2267 | Val Acc: 0.2789 | Time: 00:00:27
+Epoch 006 | Seed 42 | Rate 0.10 | Train Loss: 2.6497 | Val Loss: 2.4337 | Acc (clean): 0.2669 | Acc (poison): 0.2550 | Val Acc: 0.3030 | Time: 00:00:26
+Epoch 007 | Seed 42 | Rate 0.10 | Train Loss: 2.5324 | Val Loss: 2.3595 | Acc (clean): 0.2969 | Acc (poison): 0.2833 | Val Acc: 0.3163 | Time: 00:00:27
+Epoch 008 | Seed 42 | Rate 0.10 | Train Loss: 2.3744 | Val Loss: 2.1718 | Acc (clean): 0.3438 | Acc (poison): 0.3254 | Val Acc: 0.3856 | Time: 00:00:26
+Epoch 009 | Seed 42 | Rate 0.10 | Train Loss: 2.2348 | Val Loss: 2.1576 | Acc (clean): 0.3838 | Acc (poison): 0.3622 | Val Acc: 0.3704 | Time: 00:00:26
+Epoch 010 | Seed 42 | Rate 0.10 | Train Loss: 2.0918 | Val Loss: 1.9396 | Acc (clean): 0.4209 | Acc (poison): 0.3964 | Val Acc: 0.4300 | Time: 00:00:27
+Epoch 011 | Seed 42 | Rate 0.10 | Train Loss: 1.9549 | Val Loss: 1.7478 | Acc (clean): 0.4568 | Acc (poison): 0.4298 | Val Acc: 0.4767 | Time: 00:00:27
+Epoch 012 | Seed 42 | Rate 0.10 | Train Loss: 1.8082 | Val Loss: 1.6346 | Acc (clean): 0.5029 | Acc (poison): 0.4707 | Val Acc: 0.5189 | Time: 00:00:27
+Epoch 013 | Seed 42 | Rate 0.10 | Train Loss: 1.7112 | Val Loss: 1.6653 | Acc (clean): 0.5329 | Acc (poison): 0.4962 | Val Acc: 0.5059 | Time: 00:00:25
+Epoch 014 | Seed 42 | Rate 0.10 | Train Loss: 1.6182 | Val Loss: 1.4443 | Acc (clean): 0.5566 | Acc (poison): 0.5182 | Val Acc: 0.5756 | Time: 00:00:27
+Epoch 015 | Seed 42 | Rate 0.10 | Train Loss: 1.5284 | Val Loss: 1.3728 | Acc (clean): 0.5820 | Acc (poison): 0.5432 | Val Acc: 0.5926 | Time: 00:00:26
+Epoch 016 | Seed 42 | Rate 0.10 | Train Loss: 1.4586 | Val Loss: 1.3082 | Acc (clean): 0.6027 | Acc (poison): 0.5599 | Val Acc: 0.6063 | Time: 00:00:26
+Epoch 017 | Seed 42 | Rate 0.10 | Train Loss: 1.3724 | Val Loss: 1.3515 | Acc (clean): 0.6308 | Acc (poison): 0.5839 | Val Acc: 0.5978 | Time: 00:00:25
+Epoch 018 | Seed 42 | Rate 0.10 | Train Loss: 1.3049 | Val Loss: 1.1911 | Acc (clean): 0.6484 | Acc (poison): 0.6004 | Val Acc: 0.6552 | Time: 00:00:26
+Epoch 019 | Seed 42 | Rate 0.10 | Train Loss: 1.2366 | Val Loss: 1.1590 | Acc (clean): 0.6667 | Acc (poison): 0.6175 | Val Acc: 0.6537 | Time: 00:00:26
+/home/yazanme/miniforge3/envs/venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:240: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 020 | Seed 42 | Rate 0.10 | Train Loss: 1.1817 | Val Loss: 1.0771 | Acc (clean): 0.6827 | Acc (poison): 0.6338 | Val Acc: 0.6667 | Time: 00:00:26
+Epoch 021 | Seed 42 | Rate 0.10 | Train Loss: 1.1096 | Val Loss: 1.0740 | Acc (clean): 0.7012 | Acc (poison): 0.6500 | Val Acc: 0.6763 | Time: 00:00:26
+Epoch 022 | Seed 42 | Rate 0.10 | Train Loss: 1.0459 | Val Loss: 0.9210 | Acc (clean): 0.7199 | Acc (poison): 0.6676 | Val Acc: 0.7204 | Time: 00:00:26
+Epoch 023 | Seed 42 | Rate 0.10 | Train Loss: 0.9643 | Val Loss: 0.9403 | Acc (clean): 0.7396 | Acc (poison): 0.6858 | Val Acc: 0.7133 | Time: 00:00:25
+Epoch 024 | Seed 42 | Rate 0.10 | Train Loss: 0.8964 | Val Loss: 0.8794 | Acc (clean): 0.7603 | Acc (poison): 0.7053 | Val Acc: 0.7374 | Time: 00:00:27
+Epoch 025 | Seed 42 | Rate 0.10 | Train Loss: 0.8285 | Val Loss: 0.8845 | Acc (clean): 0.7763 | Acc (poison): 0.7221 | Val Acc: 0.7400 | Time: 00:00:25
+Epoch 026 | Seed 42 | Rate 0.10 | Train Loss: 0.7926 | Val Loss: 0.8963 | Acc (clean): 0.7865 | Acc (poison): 0.7304 | Val Acc: 0.7519 | Time: 00:00:25
+Epoch 027 | Seed 42 | Rate 0.10 | Train Loss: 0.7503 | Val Loss: 0.7970 | Acc (clean): 0.7993 | Acc (poison): 0.7465 | Val Acc: 0.7763 | Time: 00:00:26
+Epoch 028 | Seed 42 | Rate 0.10 | Train Loss: 0.6924 | Val Loss: 0.8068 | Acc (clean): 0.8168 | Acc (poison): 0.7633 | Val Acc: 0.7548 | Time: 00:00:25
+Epoch 029 | Seed 42 | Rate 0.10 | Train Loss: 0.6542 | Val Loss: 0.7730 | Acc (clean): 0.8288 | Acc (poison): 0.7742 | Val Acc: 0.7656 | Time: 00:00:26
+Epoch 030 | Seed 42 | Rate 0.10 | Train Loss: 0.6105 | Val Loss: 0.7311 | Acc (clean): 0.8391 | Acc (poison): 0.7860 | Val Acc: 0.7915 | Time: 00:00:26
+Epoch 031 | Seed 42 | Rate 0.10 | Train Loss: 0.5826 | Val Loss: 0.7647 | Acc (clean): 0.8433 | Acc (poison): 0.7935 | Val Acc: 0.7796 | Time: 00:00:25
+Epoch 032 | Seed 42 | Rate 0.10 | Train Loss: 0.5374 | Val Loss: 0.7648 | Acc (clean): 0.8556 | Acc (poison): 0.8086 | Val Acc: 0.7741 | Time: 00:00:25
+Epoch 033 | Seed 42 | Rate 0.10 | Train Loss: 0.4928 | Val Loss: 0.7507 | Acc (clean): 0.8640 | Acc (poison): 0.8207 | Val Acc: 0.7885 | Time: 00:00:25
+Epoch 034 | Seed 42 | Rate 0.10 | Train Loss: 0.4632 | Val Loss: 0.7827 | Acc (clean): 0.8708 | Acc (poison): 0.8323 | Val Acc: 0.7711 | Time: 00:00:25
+Epoch 035 | Seed 42 | Rate 0.10 | Train Loss: 0.4368 | Val Loss: 0.7817 | Acc (clean): 0.8711 | Acc (poison): 0.8416 | Val Acc: 0.7704 | Time: 00:00:25
+Epoch 036 | Seed 42 | Rate 0.10 | Train Loss: 0.4096 | Val Loss: 0.7780 | Acc (clean): 0.8776 | Acc (poison): 0.8505 | Val Acc: 0.7800 | Time: 00:00:25
+Epoch 037 | Seed 42 | Rate 0.10 | Train Loss: 0.3750 | Val Loss: 0.7878 | Acc (clean): 0.8792 | Acc (poison): 0.8616 | Val Acc: 0.7819 | Time: 00:00:25
+Epoch 038 | Seed 42 | Rate 0.10 | Train Loss: 0.3513 | Val Loss: 0.8642 | Acc (clean): 0.8828 | Acc (poison): 0.8684 | Val Acc: 0.7563 | Time: 00:00:25
+Epoch 039 | Seed 42 | Rate 0.10 | Train Loss: 0.3112 | Val Loss: 0.7611 | Acc (clean): 0.8876 | Acc (poison): 0.8851 | Val Acc: 0.7878 | Time: 00:00:25
+Epoch 040 | Seed 42 | Rate 0.10 | Train Loss: 0.2906 | Val Loss: 0.9138 | Acc (clean): 0.8883 | Acc (poison): 0.8952 | Val Acc: 0.7581 | Time: 00:00:25
+Epoch 041 | Seed 42 | Rate 0.10 | Train Loss: 0.2831 | Val Loss: 0.8130 | Acc (clean): 0.8841 | Acc (poison): 0.8964 | Val Acc: 0.7767 | Time: 00:00:25
+Epoch 042 | Seed 42 | Rate 0.10 | Train Loss: 0.2461 | Val Loss: 0.8095 | Acc (clean): 0.8879 | Acc (poison): 0.9091 | Val Acc: 0.7778 | Time: 00:00:25
+Epoch 043 | Seed 42 | Rate 0.10 | Train Loss: 0.2189 | Val Loss: 0.8270 | Acc (clean): 0.8887 | Acc (poison): 0.9234 | Val Acc: 0.7793 | Time: 00:00:25
+Epoch 044 | Seed 42 | Rate 0.10 | Train Loss: 0.2169 | Val Loss: 0.8395 | Acc (clean): 0.8856 | Acc (poison): 0.9219 | Val Acc: 0.7781 | Time: 00:00:25
+Epoch 045 | Seed 42 | Rate 0.10 | Train Loss: 0.1917 | Val Loss: 0.8340 | Acc (clean): 0.8893 | Acc (poison): 0.9314 | Val Acc: 0.7841 | Time: 00:00:25
+Epoch 046 | Seed 42 | Rate 0.10 | Train Loss: 0.1716 | Val Loss: 0.8182 | Acc (clean): 0.8898 | Acc (poison): 0.9400 | Val Acc: 0.7981 | Time: 00:00:25
+Epoch 047 | Seed 42 | Rate 0.10 | Train Loss: 0.1585 | Val Loss: 0.9231 | Acc (clean): 0.8886 | Acc (poison): 0.9442 | Val Acc: 0.7752 | Time: 00:00:25
+Epoch 048 | Seed 42 | Rate 0.10 | Train Loss: 0.1318 | Val Loss: 0.9288 | Acc (clean): 0.8915 | Acc (poison): 0.9549 | Val Acc: 0.7678 | Time: 00:00:25
+Epoch 049 | Seed 42 | Rate 0.10 | Train Loss: 0.1285 | Val Loss: 0.9373 | Acc (clean): 0.8909 | Acc (poison): 0.9561 | Val Acc: 0.7685 | Time: 00:00:25
+Epoch 050 | Seed 42 | Rate 0.10 | Train Loss: 0.1305 | Val Loss: 0.9245 | Acc (clean): 0.8866 | Acc (poison): 0.9556 | Val Acc: 0.7737 | Time: 00:00:25
+Epoch 051 | Seed 42 | Rate 0.10 | Train Loss: 0.1093 | Val Loss: 0.9932 | Acc (clean): 0.8888 | Acc (poison): 0.9617 | Val Acc: 0.7626 | Time: 00:00:25
+Epoch 052 | Seed 42 | Rate 0.10 | Train Loss: 0.1037 | Val Loss: 0.9271 | Acc (clean): 0.8895 | Acc (poison): 0.9652 | Val Acc: 0.7807 | Time: 00:00:25
+Epoch 053 | Seed 42 | Rate 0.10 | Train Loss: 0.0967 | Val Loss: 0.9314 | Acc (clean): 0.8913 | Acc (poison): 0.9669 | Val Acc: 0.7833 | Time: 00:00:25
+Epoch 054 | Seed 42 | Rate 0.10 | Train Loss: 0.0866 | Val Loss: 0.9809 | Acc (clean): 0.8924 | Acc (poison): 0.9716 | Val Acc: 0.7796 | Time: 00:00:25
+Epoch 055 | Seed 42 | Rate 0.10 | Train Loss: 0.0771 | Val Loss: 0.9289 | Acc (clean): 0.8926 | Acc (poison): 0.9739 | Val Acc: 0.7841 | Time: 00:00:25
+Epoch 056 | Seed 42 | Rate 0.10 | Train Loss: 0.0643 | Val Loss: 0.9932 | Acc (clean): 0.8946 | Acc (poison): 0.9786 | Val Acc: 0.7722 | Time: 00:00:25
+Epoch 057 | Seed 42 | Rate 0.10 | Train Loss: 0.0686 | Val Loss: 1.1257 | Acc (clean): 0.8940 | Acc (poison): 0.9771 | Val Acc: 0.7533 | Time: 00:00:25
+Epoch 058 | Seed 42 | Rate 0.10 | Train Loss: 0.0681 | Val Loss: 0.9812 | Acc (clean): 0.8926 | Acc (poison): 0.9782 | Val Acc: 0.7867 | Time: 00:00:25
+Epoch 059 | Seed 42 | Rate 0.10 | Train Loss: 0.0527 | Val Loss: 1.0766 | Acc (clean): 0.8954 | Acc (poison): 0.9831 | Val Acc: 0.7681 | Time: 00:00:25
+Epoch 060 | Seed 42 | Rate 0.10 | Train Loss: 0.0536 | Val Loss: 0.9963 | Acc (clean): 0.8944 | Acc (poison): 0.9815 | Val Acc: 0.7867 | Time: 00:00:25
+Epoch 061 | Seed 42 | Rate 0.10 | Train Loss: 0.0483 | Val Loss: 0.9608 | Acc (clean): 0.8960 | Acc (poison): 0.9851 | Val Acc: 0.7907 | Time: 00:00:25
+Epoch 062 | Seed 42 | Rate 0.10 | Train Loss: 0.0431 | Val Loss: 1.1033 | Acc (clean): 0.8951 | Acc (poison): 0.9848 | Val Acc: 0.7711 | Time: 00:00:25
+Epoch 063 | Seed 42 | Rate 0.10 | Train Loss: 0.0415 | Val Loss: 0.9940 | Acc (clean): 0.8965 | Acc (poison): 0.9865 | Val Acc: 0.7852 | Time: 00:00:25
+Epoch 064 | Seed 42 | Rate 0.10 | Train Loss: 0.0376 | Val Loss: 1.0025 | Acc (clean): 0.8966 | Acc (poison): 0.9879 | Val Acc: 0.7937 | Time: 00:00:24
+Epoch 065 | Seed 42 | Rate 0.10 | Train Loss: 0.0353 | Val Loss: 0.9704 | Acc (clean): 0.8967 | Acc (poison): 0.9902 | Val Acc: 0.7967 | Time: 00:00:25
+Epoch 066 | Seed 42 | Rate 0.10 | Train Loss: 0.0320 | Val Loss: 1.0516 | Acc (clean): 0.8972 | Acc (poison): 0.9905 | Val Acc: 0.7785 | Time: 00:00:25
+Epoch 067 | Seed 42 | Rate 0.10 | Train Loss: 0.0316 | Val Loss: 1.0671 | Acc (clean): 0.8967 | Acc (poison): 0.9899 | Val Acc: 0.7852 | Time: 00:00:25
+Epoch 068 | Seed 42 | Rate 0.10 | Train Loss: 0.0294 | Val Loss: 1.0650 | Acc (clean): 0.8970 | Acc (poison): 0.9910 | Val Acc: 0.7893 | Time: 00:00:25
+Epoch 069 | Seed 42 | Rate 0.10 | Train Loss: 0.0270 | Val Loss: 1.1014 | Acc (clean): 0.8968 | Acc (poison): 0.9916 | Val Acc: 0.7804 | Time: 00:00:25
+Epoch 070 | Seed 42 | Rate 0.10 | Train Loss: 0.0259 | Val Loss: 1.0377 | Acc (clean): 0.8973 | Acc (poison): 0.9920 | Val Acc: 0.7904 | Time: 00:00:25
+Epoch 071 | Seed 42 | Rate 0.10 | Train Loss: 0.0262 | Val Loss: 1.0290 | Acc (clean): 0.8971 | Acc (poison): 0.9921 | Val Acc: 0.7978 | Time: 00:00:25
+Epoch 072 | Seed 42 | Rate 0.10 | Train Loss: 0.0227 | Val Loss: 1.0340 | Acc (clean): 0.8978 | Acc (poison): 0.9926 | Val Acc: 0.7926 | Time: 00:00:25
+Epoch 073 | Seed 42 | Rate 0.10 | Train Loss: 0.0255 | Val Loss: 1.0241 | Acc (clean): 0.8971 | Acc (poison): 0.9918 | Val Acc: 0.7952 | Time: 00:00:24
+Epoch 074 | Seed 42 | Rate 0.10 | Train Loss: 0.0214 | Val Loss: 1.1051 | Acc (clean): 0.8982 | Acc (poison): 0.9935 | Val Acc: 0.7904 | Time: 00:00:25
+Epoch 075 | Seed 42 | Rate 0.10 | Train Loss: 0.0176 | Val Loss: 1.0115 | Acc (clean): 0.8977 | Acc (poison): 0.9947 | Val Acc: 0.8093 | Time: 00:00:25
+Epoch 076 | Seed 42 | Rate 0.10 | Train Loss: 0.0166 | Val Loss: 1.0561 | Acc (clean): 0.8996 | Acc (poison): 0.9953 | Val Acc: 0.7963 | Time: 00:00:25
+Epoch 077 | Seed 42 | Rate 0.10 | Train Loss: 0.0143 | Val Loss: 1.0235 | Acc (clean): 0.8987 | Acc (poison): 0.9959 | Val Acc: 0.7974 | Time: 00:00:24
+Epoch 078 | Seed 42 | Rate 0.10 | Train Loss: 0.0131 | Val Loss: 1.0312 | Acc (clean): 0.8993 | Acc (poison): 0.9962 | Val Acc: 0.8030 | Time: 00:00:24
+Epoch 079 | Seed 42 | Rate 0.10 | Train Loss: 0.0157 | Val Loss: 1.0566 | Acc (clean): 0.8991 | Acc (poison): 0.9953 | Val Acc: 0.7970 | Time: 00:00:24
+Epoch 080 | Seed 42 | Rate 0.10 | Train Loss: 0.0137 | Val Loss: 1.0453 | Acc (clean): 0.8988 | Acc (poison): 0.9960 | Val Acc: 0.7956 | Time: 00:00:25
+Epoch 081 | Seed 42 | Rate 0.10 | Train Loss: 0.0134 | Val Loss: 1.0147 | Acc (clean): 0.8988 | Acc (poison): 0.9960 | Val Acc: 0.8000 | Time: 00:00:25
+Epoch 082 | Seed 42 | Rate 0.10 | Train Loss: 0.0102 | Val Loss: 1.0266 | Acc (clean): 0.8992 | Acc (poison): 0.9970 | Val Acc: 0.8137 | Time: 00:00:25
+Epoch 083 | Seed 42 | Rate 0.10 | Train Loss: 0.0094 | Val Loss: 1.0241 | Acc (clean): 0.8995 | Acc (poison): 0.9976 | Val Acc: 0.7993 | Time: 00:00:25
+Epoch 084 | Seed 42 | Rate 0.10 | Train Loss: 0.0096 | Val Loss: 1.0606 | Acc (clean): 0.8990 | Acc (poison): 0.9971 | Val Acc: 0.8041 | Time: 00:00:25
+Epoch 085 | Seed 42 | Rate 0.10 | Train Loss: 0.0074 | Val Loss: 1.0433 | Acc (clean): 0.8997 | Acc (poison): 0.9982 | Val Acc: 0.8037 | Time: 00:00:25
+Epoch 086 | Seed 42 | Rate 0.10 | Train Loss: 0.0074 | Val Loss: 1.0658 | Acc (clean): 0.8993 | Acc (poison): 0.9979 | Val Acc: 0.8033 | Time: 00:00:25
+Epoch 087 | Seed 42 | Rate 0.10 | Train Loss: 0.0080 | Val Loss: 1.0424 | Acc (clean): 0.8998 | Acc (poison): 0.9975 | Val Acc: 0.8048 | Time: 00:00:24
+Epoch 088 | Seed 42 | Rate 0.10 | Train Loss: 0.0074 | Val Loss: 1.0114 | Acc (clean): 0.8998 | Acc (poison): 0.9981 | Val Acc: 0.8059 | Time: 00:00:25
+Epoch 089 | Seed 42 | Rate 0.10 | Train Loss: 0.0078 | Val Loss: 1.0512 | Acc (clean): 0.8997 | Acc (poison): 0.9977 | Val Acc: 0.7978 | Time: 00:00:25
+Epoch 090 | Seed 42 | Rate 0.10 | Train Loss: 0.0061 | Val Loss: 1.0198 | Acc (clean): 0.8998 | Acc (poison): 0.9984 | Val Acc: 0.8041 | Time: 00:00:24
+Epoch 091 | Seed 42 | Rate 0.10 | Train Loss: 0.0076 | Val Loss: 1.0322 | Acc (clean): 0.8994 | Acc (poison): 0.9981 | Val Acc: 0.8048 | Time: 00:00:25
+Epoch 092 | Seed 42 | Rate 0.10 | Train Loss: 0.0072 | Val Loss: 1.0278 | Acc (clean): 0.9000 | Acc (poison): 0.9980 | Val Acc: 0.8056 | Time: 00:00:24
+Epoch 093 | Seed 42 | Rate 0.10 | Train Loss: 0.0066 | Val Loss: 1.0339 | Acc (clean): 0.9001 | Acc (poison): 0.9984 | Val Acc: 0.8067 | Time: 00:00:25
+Epoch 094 | Seed 42 | Rate 0.10 | Train Loss: 0.0051 | Val Loss: 1.0322 | Acc (clean): 0.9000 | Acc (poison): 0.9989 | Val Acc: 0.8052 | Time: 00:00:24
+Epoch 095 | Seed 42 | Rate 0.10 | Train Loss: 0.0056 | Val Loss: 1.0400 | Acc (clean): 0.8999 | Acc (poison): 0.9984 | Val Acc: 0.8048 | Time: 00:00:25
+Epoch 096 | Seed 42 | Rate 0.10 | Train Loss: 0.0052 | Val Loss: 1.0467 | Acc (clean): 0.8998 | Acc (poison): 0.9986 | Val Acc: 0.8052 | Time: 00:00:25
+Epoch 097 | Seed 42 | Rate 0.10 | Train Loss: 0.0052 | Val Loss: 1.0443 | Acc (clean): 0.8997 | Acc (poison): 0.9985 | Val Acc: 0.8085 | Time: 00:00:25
+Epoch 098 | Seed 42 | Rate 0.10 | Train Loss: 0.0053 | Val Loss: 1.0447 | Acc (clean): 0.9001 | Acc (poison): 0.9986 | Val Acc: 0.8056 | Time: 00:00:24
+Epoch 099 | Seed 42 | Rate 0.10 | Train Loss: 0.0054 | Val Loss: 1.0432 | Acc (clean): 0.8995 | Acc (poison): 0.9988 | Val Acc: 0.8070 | Time: 00:00:25
+Epoch 100 | Seed 42 | Rate 0.10 | Train Loss: 0.0048 | Val Loss: 1.0430 | Acc (clean): 0.8996 | Acc (poison): 0.9985 | Val Acc: 0.8081 | Time: 00:00:24
+Loading train data from /home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/train.h5 with mapping /home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_42/labels_0.20.pt... (in_memory=True, workers=6)
+Testing torch.compile support...
+Successfully compiled model using torch.compile.
+LR-Warmup aktiv: 20 Epochen linear, danach cosine.
+Epoch 001 | Seed 42 | Rate 0.20 | Train Loss: 3.6399 | Val Loss: 3.5140 | Acc (clean): 0.0709 | Acc (poison): 0.0698 | Val Acc: 0.0930 | Time: 00:00:27
+Epoch 002 | Seed 42 | Rate 0.20 | Train Loss: 3.4025 | Val Loss: 3.2194 | Acc (clean): 0.1136 | Acc (poison): 0.1105 | Val Acc: 0.1474 | Time: 00:00:27
+Epoch 003 | Seed 42 | Rate 0.20 | Train Loss: 3.1902 | Val Loss: 3.0060 | Acc (clean): 0.1645 | Acc (poison): 0.1576 | Val Acc: 0.1815 | Time: 00:00:26
+Epoch 004 | Seed 42 | Rate 0.20 | Train Loss: 2.9843 | Val Loss: 2.7635 | Acc (clean): 0.2040 | Acc (poison): 0.1933 | Val Acc: 0.2356 | Time: 00:00:27
+Epoch 005 | Seed 42 | Rate 0.20 | Train Loss: 2.8277 | Val Loss: 2.6591 | Acc (clean): 0.2280 | Acc (poison): 0.2167 | Val Acc: 0.2552 | Time: 00:00:27
+Epoch 006 | Seed 42 | Rate 0.20 | Train Loss: 2.7045 | Val Loss: 2.4921 | Acc (clean): 0.2576 | Acc (poison): 0.2407 | Val Acc: 0.2830 | Time: 00:00:27
+Epoch 007 | Seed 42 | Rate 0.20 | Train Loss: 2.5936 | Val Loss: 2.3424 | Acc (clean): 0.2870 | Acc (poison): 0.2649 | Val Acc: 0.3263 | Time: 00:00:26
+Epoch 008 | Seed 42 | Rate 0.20 | Train Loss: 2.4408 | Val Loss: 2.2519 | Acc (clean): 0.3293 | Acc (poison): 0.3033 | Val Acc: 0.3644 | Time: 00:00:28
+Epoch 009 | Seed 42 | Rate 0.20 | Train Loss: 2.3128 | Val Loss: 2.1681 | Acc (clean): 0.3627 | Acc (poison): 0.3302 | Val Acc: 0.3789 | Time: 00:00:27
+Epoch 010 | Seed 42 | Rate 0.20 | Train Loss: 2.1736 | Val Loss: 1.9775 | Acc (clean): 0.3994 | Acc (poison): 0.3599 | Val Acc: 0.4278 | Time: 00:00:26
+Epoch 011 | Seed 42 | Rate 0.20 | Train Loss: 2.0547 | Val Loss: 1.8379 | Acc (clean): 0.4332 | Acc (poison): 0.3889 | Val Acc: 0.4541 | Time: 00:00:26
+Epoch 012 | Seed 42 | Rate 0.20 | Train Loss: 1.9079 | Val Loss: 1.7568 | Acc (clean): 0.4707 | Acc (poison): 0.4201 | Val Acc: 0.4863 | Time: 00:00:27
+Epoch 013 | Seed 42 | Rate 0.20 | Train Loss: 1.8076 | Val Loss: 1.6754 | Acc (clean): 0.5025 | Acc (poison): 0.4441 | Val Acc: 0.4963 | Time: 00:00:26
+Epoch 014 | Seed 42 | Rate 0.20 | Train Loss: 1.7201 | Val Loss: 1.5631 | Acc (clean): 0.5226 | Acc (poison): 0.4625 | Val Acc: 0.5463 | Time: 00:00:26
+Epoch 015 | Seed 42 | Rate 0.20 | Train Loss: 1.6333 | Val Loss: 1.5008 | Acc (clean): 0.5487 | Acc (poison): 0.4850 | Val Acc: 0.5444 | Time: 00:00:26
+Epoch 016 | Seed 42 | Rate 0.20 | Train Loss: 1.5522 | Val Loss: 1.3656 | Acc (clean): 0.5771 | Acc (poison): 0.5071 | Val Acc: 0.5937 | Time: 00:00:26
+Epoch 017 | Seed 42 | Rate 0.20 | Train Loss: 1.4686 | Val Loss: 1.4717 | Acc (clean): 0.5992 | Acc (poison): 0.5257 | Val Acc: 0.5678 | Time: 00:00:25
+Epoch 018 | Seed 42 | Rate 0.20 | Train Loss: 1.4099 | Val Loss: 1.3236 | Acc (clean): 0.6072 | Acc (poison): 0.5346 | Val Acc: 0.6063 | Time: 00:00:27
+Epoch 019 | Seed 42 | Rate 0.20 | Train Loss: 1.3366 | Val Loss: 1.2419 | Acc (clean): 0.6292 | Acc (poison): 0.5534 | Val Acc: 0.6307 | Time: 00:00:26
+/home/yazanme/miniforge3/envs/venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:240: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 020 | Seed 42 | Rate 0.20 | Train Loss: 1.2775 | Val Loss: 1.1685 | Acc (clean): 0.6468 | Acc (poison): 0.5684 | Val Acc: 0.6448 | Time: 00:00:26
+Epoch 021 | Seed 42 | Rate 0.20 | Train Loss: 1.2269 | Val Loss: 1.1741 | Acc (clean): 0.6616 | Acc (poison): 0.5824 | Val Acc: 0.6570 | Time: 00:00:25
+Epoch 022 | Seed 42 | Rate 0.20 | Train Loss: 1.1582 | Val Loss: 1.0860 | Acc (clean): 0.6783 | Acc (poison): 0.5977 | Val Acc: 0.6748 | Time: 00:00:26
+Epoch 023 | Seed 42 | Rate 0.20 | Train Loss: 1.0891 | Val Loss: 1.0975 | Acc (clean): 0.6940 | Acc (poison): 0.6096 | Val Acc: 0.6730 | Time: 00:00:25
+Epoch 024 | Seed 42 | Rate 0.20 | Train Loss: 1.0233 | Val Loss: 1.0047 | Acc (clean): 0.7110 | Acc (poison): 0.6228 | Val Acc: 0.6952 | Time: 00:00:26
+Epoch 025 | Seed 42 | Rate 0.20 | Train Loss: 0.9534 | Val Loss: 0.9903 | Acc (clean): 0.7311 | Acc (poison): 0.6429 | Val Acc: 0.7067 | Time: 00:00:26
+Epoch 026 | Seed 42 | Rate 0.20 | Train Loss: 0.9123 | Val Loss: 1.0234 | Acc (clean): 0.7440 | Acc (poison): 0.6528 | Val Acc: 0.6881 | Time: 00:00:25
+Epoch 027 | Seed 42 | Rate 0.20 | Train Loss: 0.8588 | Val Loss: 0.9132 | Acc (clean): 0.7566 | Acc (poison): 0.6706 | Val Acc: 0.7241 | Time: 00:00:26
+Epoch 028 | Seed 42 | Rate 0.20 | Train Loss: 0.8094 | Val Loss: 0.9703 | Acc (clean): 0.7666 | Acc (poison): 0.6821 | Val Acc: 0.6970 | Time: 00:00:25
+Epoch 029 | Seed 42 | Rate 0.20 | Train Loss: 0.7771 | Val Loss: 0.8750 | Acc (clean): 0.7723 | Acc (poison): 0.6904 | Val Acc: 0.7341 | Time: 00:00:27
+Epoch 030 | Seed 42 | Rate 0.20 | Train Loss: 0.7366 | Val Loss: 0.8616 | Acc (clean): 0.7828 | Acc (poison): 0.7037 | Val Acc: 0.7278 | Time: 00:00:27
+Epoch 031 | Seed 42 | Rate 0.20 | Train Loss: 0.7057 | Val Loss: 0.8924 | Acc (clean): 0.7836 | Acc (poison): 0.7139 | Val Acc: 0.7148 | Time: 00:00:25
+Epoch 032 | Seed 42 | Rate 0.20 | Train Loss: 0.6685 | Val Loss: 0.9459 | Acc (clean): 0.7974 | Acc (poison): 0.7266 | Val Acc: 0.7048 | Time: 00:00:25
+Epoch 033 | Seed 42 | Rate 0.20 | Train Loss: 0.6349 | Val Loss: 0.9000 | Acc (clean): 0.7980 | Acc (poison): 0.7353 | Val Acc: 0.7144 | Time: 00:00:25
+Epoch 034 | Seed 42 | Rate 0.20 | Train Loss: 0.5915 | Val Loss: 0.8714 | Acc (clean): 0.8048 | Acc (poison): 0.7487 | Val Acc: 0.7296 | Time: 00:00:25
+Epoch 035 | Seed 42 | Rate 0.20 | Train Loss: 0.5681 | Val Loss: 0.8884 | Acc (clean): 0.8075 | Acc (poison): 0.7616 | Val Acc: 0.7219 | Time: 00:00:25
+Epoch 036 | Seed 42 | Rate 0.20 | Train Loss: 0.5413 | Val Loss: 0.9059 | Acc (clean): 0.8049 | Acc (poison): 0.7730 | Val Acc: 0.7185 | Time: 00:00:25
+Epoch 037 | Seed 42 | Rate 0.20 | Train Loss: 0.5173 | Val Loss: 0.8944 | Acc (clean): 0.8052 | Acc (poison): 0.7836 | Val Acc: 0.7319 | Time: 00:00:25
+Epoch 038 | Seed 42 | Rate 0.20 | Train Loss: 0.4864 | Val Loss: 0.9205 | Acc (clean): 0.8058 | Acc (poison): 0.7941 | Val Acc: 0.7104 | Time: 00:00:25
+Epoch 039 | Seed 42 | Rate 0.20 | Train Loss: 0.4462 | Val Loss: 0.9321 | Acc (clean): 0.8117 | Acc (poison): 0.8163 | Val Acc: 0.7063 | Time: 00:00:25
+Epoch 040 | Seed 42 | Rate 0.20 | Train Loss: 0.4196 | Val Loss: 0.9611 | Acc (clean): 0.8064 | Acc (poison): 0.8240 | Val Acc: 0.7130 | Time: 00:00:25
+Epoch 041 | Seed 42 | Rate 0.20 | Train Loss: 0.3967 | Val Loss: 1.0066 | Acc (clean): 0.8089 | Acc (poison): 0.8403 | Val Acc: 0.6981 | Time: 00:00:25
+Epoch 042 | Seed 42 | Rate 0.20 | Train Loss: 0.3722 | Val Loss: 0.9734 | Acc (clean): 0.8042 | Acc (poison): 0.8497 | Val Acc: 0.6930 | Time: 00:00:25
+Epoch 043 | Seed 42 | Rate 0.20 | Train Loss: 0.3384 | Val Loss: 1.0457 | Acc (clean): 0.8035 | Acc (poison): 0.8635 | Val Acc: 0.6885 | Time: 00:00:25
+Epoch 044 | Seed 42 | Rate 0.20 | Train Loss: 0.2961 | Val Loss: 1.0431 | Acc (clean): 0.8010 | Acc (poison): 0.8834 | Val Acc: 0.6874 | Time: 00:00:25
+Epoch 045 | Seed 42 | Rate 0.20 | Train Loss: 0.2621 | Val Loss: 1.0632 | Acc (clean): 0.8005 | Acc (poison): 0.8962 | Val Acc: 0.6841 | Time: 00:00:25
+Epoch 046 | Seed 42 | Rate 0.20 | Train Loss: 0.2589 | Val Loss: 1.0668 | Acc (clean): 0.7964 | Acc (poison): 0.9000 | Val Acc: 0.6948 | Time: 00:00:25
+Epoch 047 | Seed 42 | Rate 0.20 | Train Loss: 0.2285 | Val Loss: 1.0268 | Acc (clean): 0.7949 | Acc (poison): 0.9128 | Val Acc: 0.7067 | Time: 00:00:25
+Epoch 048 | Seed 42 | Rate 0.20 | Train Loss: 0.1983 | Val Loss: 1.1209 | Acc (clean): 0.7949 | Acc (poison): 0.9260 | Val Acc: 0.6933 | Time: 00:00:25
+Epoch 049 | Seed 42 | Rate 0.20 | Train Loss: 0.1876 | Val Loss: 1.1402 | Acc (clean): 0.7914 | Acc (poison): 0.9287 | Val Acc: 0.6893 | Time: 00:00:25
+Epoch 050 | Seed 42 | Rate 0.20 | Train Loss: 0.1688 | Val Loss: 1.1619 | Acc (clean): 0.7940 | Acc (poison): 0.9375 | Val Acc: 0.7011 | Time: 00:00:25
+Epoch 051 | Seed 42 | Rate 0.20 | Train Loss: 0.1533 | Val Loss: 1.1933 | Acc (clean): 0.7926 | Acc (poison): 0.9450 | Val Acc: 0.6952 | Time: 00:00:25
+Epoch 052 | Seed 42 | Rate 0.20 | Train Loss: 0.1277 | Val Loss: 1.2145 | Acc (clean): 0.7938 | Acc (poison): 0.9557 | Val Acc: 0.6915 | Time: 00:00:25
+Epoch 053 | Seed 42 | Rate 0.20 | Train Loss: 0.1231 | Val Loss: 1.2065 | Acc (clean): 0.7930 | Acc (poison): 0.9564 | Val Acc: 0.6930 | Time: 00:00:25
+Epoch 054 | Seed 42 | Rate 0.20 | Train Loss: 0.1064 | Val Loss: 1.3714 | Acc (clean): 0.7951 | Acc (poison): 0.9626 | Val Acc: 0.6856 | Time: 00:00:25
+Epoch 055 | Seed 42 | Rate 0.20 | Train Loss: 0.1027 | Val Loss: 1.2637 | Acc (clean): 0.7924 | Acc (poison): 0.9665 | Val Acc: 0.6863 | Time: 00:00:25
+Epoch 056 | Seed 42 | Rate 0.20 | Train Loss: 0.0906 | Val Loss: 1.3104 | Acc (clean): 0.7963 | Acc (poison): 0.9695 | Val Acc: 0.6922 | Time: 00:00:25
+Epoch 057 | Seed 42 | Rate 0.20 | Train Loss: 0.0876 | Val Loss: 1.3122 | Acc (clean): 0.7933 | Acc (poison): 0.9681 | Val Acc: 0.6956 | Time: 00:00:25
+Epoch 058 | Seed 42 | Rate 0.20 | Train Loss: 0.0767 | Val Loss: 1.3375 | Acc (clean): 0.7959 | Acc (poison): 0.9745 | Val Acc: 0.6878 | Time: 00:00:25
+Epoch 059 | Seed 42 | Rate 0.20 | Train Loss: 0.0693 | Val Loss: 1.3408 | Acc (clean): 0.7955 | Acc (poison): 0.9777 | Val Acc: 0.6959 | Time: 00:00:25
+Epoch 060 | Seed 42 | Rate 0.20 | Train Loss: 0.0671 | Val Loss: 1.3747 | Acc (clean): 0.7947 | Acc (poison): 0.9769 | Val Acc: 0.6841 | Time: 00:00:25
+Epoch 061 | Seed 42 | Rate 0.20 | Train Loss: 0.0645 | Val Loss: 1.3653 | Acc (clean): 0.7956 | Acc (poison): 0.9784 | Val Acc: 0.6970 | Time: 00:00:25
+Epoch 062 | Seed 42 | Rate 0.20 | Train Loss: 0.0547 | Val Loss: 1.3920 | Acc (clean): 0.7972 | Acc (poison): 0.9821 | Val Acc: 0.7019 | Time: 00:00:25
+Epoch 063 | Seed 42 | Rate 0.20 | Train Loss: 0.0546 | Val Loss: 1.4617 | Acc (clean): 0.7963 | Acc (poison): 0.9820 | Val Acc: 0.6863 | Time: 00:00:25
+Epoch 064 | Seed 42 | Rate 0.20 | Train Loss: 0.0455 | Val Loss: 1.4271 | Acc (clean): 0.7977 | Acc (poison): 0.9858 | Val Acc: 0.6878 | Time: 00:00:25
+Epoch 065 | Seed 42 | Rate 0.20 | Train Loss: 0.0483 | Val Loss: 1.3871 | Acc (clean): 0.7964 | Acc (poison): 0.9836 | Val Acc: 0.7063 | Time: 00:00:25
+Epoch 066 | Seed 42 | Rate 0.20 | Train Loss: 0.0363 | Val Loss: 1.3617 | Acc (clean): 0.7981 | Acc (poison): 0.9896 | Val Acc: 0.7152 | Time: 00:00:25
+Epoch 067 | Seed 42 | Rate 0.20 | Train Loss: 0.0321 | Val Loss: 1.4320 | Acc (clean): 0.7975 | Acc (poison): 0.9898 | Val Acc: 0.6993 | Time: 00:00:25
+Epoch 068 | Seed 42 | Rate 0.20 | Train Loss: 0.0349 | Val Loss: 1.4735 | Acc (clean): 0.7978 | Acc (poison): 0.9888 | Val Acc: 0.6926 | Time: 00:00:25
+Epoch 069 | Seed 42 | Rate 0.20 | Train Loss: 0.0354 | Val Loss: 1.5129 | Acc (clean): 0.7963 | Acc (poison): 0.9887 | Val Acc: 0.6974 | Time: 00:00:25
+Epoch 070 | Seed 42 | Rate 0.20 | Train Loss: 0.0301 | Val Loss: 1.5040 | Acc (clean): 0.7981 | Acc (poison): 0.9907 | Val Acc: 0.6981 | Time: 00:00:25
+Epoch 071 | Seed 42 | Rate 0.20 | Train Loss: 0.0254 | Val Loss: 1.4820 | Acc (clean): 0.7990 | Acc (poison): 0.9922 | Val Acc: 0.7044 | Time: 00:00:25
+Epoch 072 | Seed 42 | Rate 0.20 | Train Loss: 0.0222 | Val Loss: 1.4978 | Acc (clean): 0.7984 | Acc (poison): 0.9933 | Val Acc: 0.6989 | Time: 00:00:25
+Epoch 073 | Seed 42 | Rate 0.20 | Train Loss: 0.0230 | Val Loss: 1.5337 | Acc (clean): 0.7991 | Acc (poison): 0.9933 | Val Acc: 0.6989 | Time: 00:00:24
+Epoch 074 | Seed 42 | Rate 0.20 | Train Loss: 0.0241 | Val Loss: 1.5421 | Acc (clean): 0.7980 | Acc (poison): 0.9924 | Val Acc: 0.7004 | Time: 00:00:25
+Epoch 075 | Seed 42 | Rate 0.20 | Train Loss: 0.0208 | Val Loss: 1.4959 | Acc (clean): 0.7988 | Acc (poison): 0.9935 | Val Acc: 0.7070 | Time: 00:00:24
+Epoch 076 | Seed 42 | Rate 0.20 | Train Loss: 0.0171 | Val Loss: 1.5528 | Acc (clean): 0.7996 | Acc (poison): 0.9949 | Val Acc: 0.6978 | Time: 00:00:25
+Epoch 077 | Seed 42 | Rate 0.20 | Train Loss: 0.0181 | Val Loss: 1.5526 | Acc (clean): 0.7991 | Acc (poison): 0.9946 | Val Acc: 0.6915 | Time: 00:00:25
+Epoch 078 | Seed 42 | Rate 0.20 | Train Loss: 0.0162 | Val Loss: 1.5321 | Acc (clean): 0.7996 | Acc (poison): 0.9957 | Val Acc: 0.7041 | Time: 00:00:25
+Epoch 079 | Seed 42 | Rate 0.20 | Train Loss: 0.0129 | Val Loss: 1.5177 | Acc (clean): 0.7993 | Acc (poison): 0.9966 | Val Acc: 0.7044 | Time: 00:00:24
+Epoch 080 | Seed 42 | Rate 0.20 | Train Loss: 0.0135 | Val Loss: 1.5084 | Acc (clean): 0.7990 | Acc (poison): 0.9962 | Val Acc: 0.7052 | Time: 00:00:24
+Epoch 081 | Seed 42 | Rate 0.20 | Train Loss: 0.0141 | Val Loss: 1.5050 | Acc (clean): 0.7993 | Acc (poison): 0.9960 | Val Acc: 0.6993 | Time: 00:00:25
+Epoch 082 | Seed 42 | Rate 0.20 | Train Loss: 0.0114 | Val Loss: 1.5398 | Acc (clean): 0.7996 | Acc (poison): 0.9969 | Val Acc: 0.7041 | Time: 00:00:25
+Epoch 083 | Seed 42 | Rate 0.20 | Train Loss: 0.0105 | Val Loss: 1.5850 | Acc (clean): 0.7999 | Acc (poison): 0.9972 | Val Acc: 0.7052 | Time: 00:00:25
+Epoch 084 | Seed 42 | Rate 0.20 | Train Loss: 0.0102 | Val Loss: 1.5833 | Acc (clean): 0.8001 | Acc (poison): 0.9971 | Val Acc: 0.6967 | Time: 00:00:24
+Epoch 085 | Seed 42 | Rate 0.20 | Train Loss: 0.0099 | Val Loss: 1.5489 | Acc (clean): 0.7994 | Acc (poison): 0.9970 | Val Acc: 0.7052 | Time: 00:00:25
+Epoch 086 | Seed 42 | Rate 0.20 | Train Loss: 0.0095 | Val Loss: 1.5389 | Acc (clean): 0.7998 | Acc (poison): 0.9975 | Val Acc: 0.7052 | Time: 00:00:25
+Epoch 087 | Seed 42 | Rate 0.20 | Train Loss: 0.0084 | Val Loss: 1.5392 | Acc (clean): 0.8000 | Acc (poison): 0.9973 | Val Acc: 0.7067 | Time: 00:00:25
+Epoch 088 | Seed 42 | Rate 0.20 | Train Loss: 0.0087 | Val Loss: 1.5261 | Acc (clean): 0.7994 | Acc (poison): 0.9974 | Val Acc: 0.7078 | Time: 00:00:25
+Epoch 089 | Seed 42 | Rate 0.20 | Train Loss: 0.0077 | Val Loss: 1.5222 | Acc (clean): 0.7997 | Acc (poison): 0.9982 | Val Acc: 0.7093 | Time: 00:00:25
+Epoch 090 | Seed 42 | Rate 0.20 | Train Loss: 0.0072 | Val Loss: 1.5591 | Acc (clean): 0.7998 | Acc (poison): 0.9980 | Val Acc: 0.7007 | Time: 00:00:25
+Epoch 091 | Seed 42 | Rate 0.20 | Train Loss: 0.0090 | Val Loss: 1.5452 | Acc (clean): 0.8000 | Acc (poison): 0.9974 | Val Acc: 0.7030 | Time: 00:00:25
+Epoch 092 | Seed 42 | Rate 0.20 | Train Loss: 0.0075 | Val Loss: 1.5482 | Acc (clean): 0.7995 | Acc (poison): 0.9978 | Val Acc: 0.7052 | Time: 00:00:24
+Epoch 093 | Seed 42 | Rate 0.20 | Train Loss: 0.0073 | Val Loss: 1.5399 | Acc (clean): 0.7994 | Acc (poison): 0.9977 | Val Acc: 0.7081 | Time: 00:00:25
+Epoch 094 | Seed 42 | Rate 0.20 | Train Loss: 0.0069 | Val Loss: 1.5504 | Acc (clean): 0.7998 | Acc (poison): 0.9977 | Val Acc: 0.7059 | Time: 00:00:24
+Epoch 095 | Seed 42 | Rate 0.20 | Train Loss: 0.0062 | Val Loss: 1.5498 | Acc (clean): 0.7997 | Acc (poison): 0.9982 | Val Acc: 0.7044 | Time: 00:00:25
+Epoch 096 | Seed 42 | Rate 0.20 | Train Loss: 0.0066 | Val Loss: 1.5428 | Acc (clean): 0.7999 | Acc (poison): 0.9981 | Val Acc: 0.7070 | Time: 00:00:25
+Epoch 097 | Seed 42 | Rate 0.20 | Train Loss: 0.0061 | Val Loss: 1.5400 | Acc (clean): 0.8000 | Acc (poison): 0.9983 | Val Acc: 0.7048 | Time: 00:00:24
+Epoch 098 | Seed 42 | Rate 0.20 | Train Loss: 0.0058 | Val Loss: 1.5400 | Acc (clean): 0.7997 | Acc (poison): 0.9984 | Val Acc: 0.7063 | Time: 00:00:24
+Epoch 099 | Seed 42 | Rate 0.20 | Train Loss: 0.0066 | Val Loss: 1.5412 | Acc (clean): 0.7998 | Acc (poison): 0.9979 | Val Acc: 0.7056 | Time: 00:00:25
+Epoch 100 | Seed 42 | Rate 0.20 | Train Loss: 0.0062 | Val Loss: 1.5421 | Acc (clean): 0.8002 | Acc (poison): 0.9985 | Val Acc: 0.7059 | Time: 00:00:25
+
+Endzeit: 2026-08-01 04:37:00 CEST
+Laufzeit: 04:36:57
+Exit-Code: 0
+
+Abgeschlossene Laeufe (erwartet: 6 Raten):
+/home/yazanme/BachelorThesis/BachelorThesis/experiments/RQ2/convnext_tiny/seed_42/rate_0.0
+/home/yazanme/BachelorThesis/BachelorThesis/experiments/RQ2/convnext_tiny/seed_42/rate_0.01
+/home/yazanme/BachelorThesis/BachelorThesis/experiments/RQ2/convnext_tiny/seed_42/rate_0.02
+/home/yazanme/BachelorThesis/BachelorThesis/experiments/RQ2/convnext_tiny/seed_42/rate_0.05
+/home/yazanme/BachelorThesis/BachelorThesis/experiments/RQ2/convnext_tiny/seed_42/rate_0.1
+/home/yazanme/BachelorThesis/BachelorThesis/experiments/RQ2/convnext_tiny/seed_42/rate_0.2
+Anzahl: 6

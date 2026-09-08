@@ -1,0 +1,72 @@
+=========================================
+1. SLURM ALLOKATIONS-INFO
+=========================================
+Job ID: 4847
+Ausfuehrender Node: gpu01
+Zugewiesene CPUs: 2
+Zugewiesener Speicher: 8192 MB
+Zugewiesene GPUs: 3
+Zugewiesene GPUs ueber CUDA: 0
+
+Zeitzonen-Check -> Node-Uhr (UTC): 2026-07-31 15:38:10 UTC
+Zeitzonen-Check -> korrigiert    : 2026-07-31 17:38:10 CEST
+
+Python: /home/yazanme/miniforge3/envs/venv/bin/python
+Version: Python 3.12.13
+
+Forschungsfrage:  RQ2.2-dissim
+Trainings-Config: /home/yazanme/BachelorThesis/BachelorThesis/src/yaml/preparation/rq2_2_dissim_data_preparation.yaml
+Daten-Config:     /home/yazanme/BachelorThesis/BachelorThesis/src/implementation/data_preparation/config.yaml
+
+Startzeit: 2026-07-31 17:38:11 CEST
+
+====================================================================================================
+Phase 1: Preprocessing & HDF5 conversion (NWPU-RESISC45)
+====================================================================================================
+Alle HDF5-Splits vorhanden -- Preprocessing uebersprungen (preprocessing.skip_if_exists: false erzwingt den Lauf).
+
+====================================================================================================
+Phase 2: Label poisoning fuer RQ2.2-dissim
+====================================================================================================
+RQ2.2-dissim: Paar [12, 26]
+RQ2.2-dissim seed=42 rate=0.05: 54 flipped -> seed_42/labels_0.05.pt
+RQ2.2-dissim seed=42 rate=0.10: 108 flipped -> seed_42/labels_0.10.pt
+RQ2.2-dissim seed=42 rate=0.20: 216 flipped -> seed_42/labels_0.20.pt
+RQ2.2-dissim seed=42 rate=0.50: 540 flipped -> seed_42/labels_0.50.pt
+RQ2.2-dissim seed=42 rate=1.00: 1080 flipped -> seed_42/labels_1.00.pt
+RQ2.2-dissim seed=2001 rate=0.05: 54 flipped -> seed_2001/labels_0.05.pt
+RQ2.2-dissim seed=2001 rate=0.10: 108 flipped -> seed_2001/labels_0.10.pt
+RQ2.2-dissim seed=2001 rate=0.20: 216 flipped -> seed_2001/labels_0.20.pt
+RQ2.2-dissim seed=2001 rate=0.50: 540 flipped -> seed_2001/labels_0.50.pt
+RQ2.2-dissim seed=2001 rate=1.00: 1080 flipped -> seed_2001/labels_1.00.pt
+RQ2.2-dissim seed=2026 rate=0.05: 54 flipped -> seed_2026/labels_0.05.pt
+RQ2.2-dissim seed=2026 rate=0.10: 108 flipped -> seed_2026/labels_0.10.pt
+RQ2.2-dissim seed=2026 rate=0.20: 216 flipped -> seed_2026/labels_0.20.pt
+RQ2.2-dissim seed=2026 rate=0.50: 540 flipped -> seed_2026/labels_0.50.pt
+RQ2.2-dissim seed=2026 rate=1.00: 1080 flipped -> seed_2026/labels_1.00.pt
+
+====================================================================================================
+Pipeline complete.
+====================================================================================================
+
+Endzeit: 2026-07-31 17:38:27 CEST
+Laufzeit: 00:00:16
+Exit-Code: 0
+
+Erzeugte Label-Tensoren (erwartet: 15):
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.2-dissim/seed_2001/labels_0.05.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.2-dissim/seed_2001/labels_0.10.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.2-dissim/seed_2001/labels_0.20.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.2-dissim/seed_2001/labels_0.50.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.2-dissim/seed_2001/labels_1.00.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.2-dissim/seed_2026/labels_0.05.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.2-dissim/seed_2026/labels_0.10.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.2-dissim/seed_2026/labels_0.20.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.2-dissim/seed_2026/labels_0.50.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.2-dissim/seed_2026/labels_1.00.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.2-dissim/seed_42/labels_0.05.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.2-dissim/seed_42/labels_0.10.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.2-dissim/seed_42/labels_0.20.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.2-dissim/seed_42/labels_0.50.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.2-dissim/seed_42/labels_1.00.pt
+Anzahl: 15

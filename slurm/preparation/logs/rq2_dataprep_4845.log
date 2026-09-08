@@ -1,0 +1,71 @@
+=========================================
+1. SLURM ALLOKATIONS-INFO
+=========================================
+Job ID: 4845
+Ausfuehrender Node: gpu01
+Zugewiesene CPUs: 2
+Zugewiesener Speicher: 8192 MB
+Zugewiesene GPUs: 3
+Zugewiesene GPUs ueber CUDA: 0
+
+Zeitzonen-Check -> Node-Uhr (UTC): 2026-07-31 15:35:07 UTC
+Zeitzonen-Check -> korrigiert    : 2026-07-31 17:35:07 CEST
+
+Python: /home/yazanme/miniforge3/envs/venv/bin/python
+Version: Python 3.12.13
+
+Forschungsfrage:  RQ2
+Trainings-Config: /home/yazanme/BachelorThesis/BachelorThesis/src/yaml/preparation/rq2_data_preparation.yaml
+Daten-Config:     /home/yazanme/BachelorThesis/BachelorThesis/src/implementation/data_preparation/config.yaml
+
+Startzeit: 2026-07-31 17:35:07 CEST
+
+====================================================================================================
+Phase 1: Preprocessing & HDF5 conversion (NWPU-RESISC45)
+====================================================================================================
+Alle HDF5-Splits vorhanden -- Preprocessing uebersprungen (preprocessing.skip_if_exists: false erzwingt den Lauf).
+
+====================================================================================================
+Phase 2: Label poisoning fuer RQ2
+====================================================================================================
+RQ2 seed=42 rate=0.01: 242 flipped -> seed_42/labels_0.01.pt
+RQ2 seed=42 rate=0.02: 486 flipped -> seed_42/labels_0.02.pt
+RQ2 seed=42 rate=0.05: 1214 flipped -> seed_42/labels_0.05.pt
+RQ2 seed=42 rate=0.10: 2430 flipped -> seed_42/labels_0.10.pt
+RQ2 seed=42 rate=0.20: 4860 flipped -> seed_42/labels_0.20.pt
+RQ2 seed=2001 rate=0.01: 242 flipped -> seed_2001/labels_0.01.pt
+RQ2 seed=2001 rate=0.02: 486 flipped -> seed_2001/labels_0.02.pt
+RQ2 seed=2001 rate=0.05: 1214 flipped -> seed_2001/labels_0.05.pt
+RQ2 seed=2001 rate=0.10: 2430 flipped -> seed_2001/labels_0.10.pt
+RQ2 seed=2001 rate=0.20: 4860 flipped -> seed_2001/labels_0.20.pt
+RQ2 seed=2026 rate=0.01: 242 flipped -> seed_2026/labels_0.01.pt
+RQ2 seed=2026 rate=0.02: 486 flipped -> seed_2026/labels_0.02.pt
+RQ2 seed=2026 rate=0.05: 1214 flipped -> seed_2026/labels_0.05.pt
+RQ2 seed=2026 rate=0.10: 2430 flipped -> seed_2026/labels_0.10.pt
+RQ2 seed=2026 rate=0.20: 4860 flipped -> seed_2026/labels_0.20.pt
+
+====================================================================================================
+Pipeline complete.
+====================================================================================================
+
+Endzeit: 2026-07-31 17:35:23 CEST
+Laufzeit: 00:00:16
+Exit-Code: 0
+
+Erzeugte Label-Tensoren (erwartet: 15):
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_2001/labels_0.01.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_2001/labels_0.02.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_2001/labels_0.05.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_2001/labels_0.10.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_2001/labels_0.20.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_2026/labels_0.01.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_2026/labels_0.02.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_2026/labels_0.05.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_2026/labels_0.10.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_2026/labels_0.20.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_42/labels_0.01.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_42/labels_0.02.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_42/labels_0.05.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_42/labels_0.10.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2/seed_42/labels_0.20.pt
+Anzahl: 15

@@ -1,0 +1,54 @@
+=========================================
+1. SLURM ALLOKATIONS-INFO
+=========================================
+Job ID: 4843
+Ausfuehrender Node: gpu01
+Zugewiesene CPUs: 4
+Zugewiesener Speicher: 16384 MB
+Zugewiesene GPUs: 3
+Zugewiesene GPUs ueber CUDA: 0
+0, NVIDIA L40S, 46068 MiB, 535.309.01
+
+Zeitzonen-Check -> Node-Uhr (UTC): 2026-07-31 15:19:50 UTC
+Zeitzonen-Check -> korrigiert    : 2026-07-31 17:19:50 CEST
+
+Python: /home/yazanme/miniforge3/envs/venv/bin/python
+Version: Python 3.12.13
+
+Baseline-Checkpoint: /home/yazanme/BachelorThesis/BachelorThesis/experiments/RQ1/resnet18/seed_42/rate_0.0/best_model_weights_rate_0.00_epoch_086.pt
+Ausgabe:             /home/yazanme/BachelorThesis/BachelorThesis/src/implementation/rq2/artifacts/discovered_target_pairs.json
+
+Startzeit: 2026-07-31 17:19:51 CEST
+
+Using baseline checkpoint: /home/yazanme/BachelorThesis/BachelorThesis/experiments/RQ1/resnet18/seed_42/rate_0.0/best_model_weights_rate_0.00_epoch_086.pt
+Similarity-Schwelle (90. Hundertstel aller 990 moeglichen Klassenpaare): 0.4741
+16 Klassenpaare oberhalb der Schwelle, 13 Klassen ohne ausreichend aehnlichen Partner:
+                     church <-> palace                     cos_sim=0.7167
+           basketball_court <-> tennis_court               cos_sim=0.6694
+         ground_track_field <-> stadium                    cos_sim=0.6330
+                    airport <-> railway_station            cos_sim=0.6132
+                       lake <-> river                      cos_sim=0.5960
+         medium_residential <-> sparse_residential         cos_sim=0.5914
+                     bridge <-> overpass                   cos_sim=0.5886
+                    freeway <-> railway                    cos_sim=0.5754
+               intersection <-> roundabout                 cos_sim=0.5739
+                      beach <-> ship                       cos_sim=0.5638
+               storage_tank <-> thermal_power_station      cos_sim=0.5613
+          circular_farmland <-> rectangular_farmland       cos_sim=0.5425
+                   airplane <-> runway                     cos_sim=0.5378
+            commercial_area <-> industrial_area            cos_sim=0.5207
+           baseball_diamond <-> golf_course                cos_sim=0.5084
+                   mountain <-> wetland                    cos_sim=0.4781
+Kein Paar gefunden: ['chaparral', 'cloud', 'dense_residential', 'desert', 'forest', 'harbor', 'island', 'meadow', 'mobile_home_park', 'parking_lot', 'sea_ice', 'snowberg', 'terrace']
+
+Unaehnlichstes Paar (fuer RQ2.2-Kontrolle): desert <-> overpass  cos_sim=0.1416
+
+Gespeichert unter /home/yazanme/BachelorThesis/BachelorThesis/src/implementation/rq2/artifacts/discovered_target_pairs.json.
+
+Endzeit: 2026-07-31 17:20:34 CEST
+Laufzeit: 00:00:43
+Exit-Code: 0
+
+HINWEIS: poisoning.target_pairs in data_preparation/config.yaml wird NICHT
+         automatisch aktualisiert. Abweichungen von Hand uebertragen und danach
+         rq2_data_preparation.sbatch neu laufen lassen.

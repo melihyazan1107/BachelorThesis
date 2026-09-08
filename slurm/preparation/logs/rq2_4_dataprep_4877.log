@@ -1,0 +1,80 @@
+=========================================
+1. SLURM ALLOKATIONS-INFO
+=========================================
+Job ID: 4877
+Ausfuehrender Node: cpu02
+Zugewiesene CPUs: 2
+Zugewiesener Speicher: 16384 MB
+Zugewiesene GPUs: keine (CPU-only Job)
+Zugewiesene GPUs ueber CUDA: nicht gesetzt
+
+Zeitzonen-Check -> Node-Uhr (UTC): 2026-08-02 16:23:14 UTC
+Zeitzonen-Check -> korrigiert    : 2026-08-02 18:23:14 CEST
+
+Python: /home/yazanme/miniforge3/envs/venv/bin/python
+Version: Python 3.12.13
+
+Forschungsfrage:  RQ2.4 (Uncertainty)
+Baseline:         experiments/RQ1/resnet18/seed_*/rate_0.0/telemetry/
+Trainings-Config: /home/yazanme/BachelorThesis/BachelorThesis/src/yaml/preparation/rq2_4_data_preparation.yaml
+Preflight ok: train.h5 + 3 Baseline-Telemetrien vorhanden.
+
+Startzeit: 2026-08-02 18:23:15 CEST
+
+====================================================================================================
+Phase 1: Preprocessing & HDF5 conversion (NWPU-RESISC45)
+====================================================================================================
+Alle HDF5-Splits vorhanden -- Preprocessing uebersprungen (preprocessing.skip_if_exists: false erzwingt den Lauf).
+
+====================================================================================================
+Phase 2: Label poisoning fuer RQ2.4
+====================================================================================================
+RQ2.4 seed=42: 261 Flips (rate 0.0107) -> /home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.4/seed_42
+RQ2.4 seed=2001: 243 Flips (rate 0.0100) -> /home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.4/seed_2001
+RQ2.4 seed=2026: 260 Flips (rate 0.0107) -> /home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.4/seed_2026
+
+====================================================================================================
+Pipeline complete.
+====================================================================================================
+
+Endzeit: 2026-08-02 18:23:32 CEST
+Laufzeit: 00:00:17
+Exit-Code: 0
+
+Erzeugte Label-Tensoren (erwartet: 3, Sentinel-Name ohne Rate):
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.4/seed_2001/labels.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.4/seed_2026/labels.pt
+/home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.4/seed_42/labels.pt
+
+Empirische Raten:
+  /home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.4/seed_2001/poisoning_summary.json:
+{
+  "seed": 2001,
+  "window": [
+    25,
+    49
+  ],
+  "confusion_threshold": 0.5,
+  "poisoned_count": 243,
+  "empirical_rate": 0.01
+}  /home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.4/seed_42/poisoning_summary.json:
+{
+  "seed": 42,
+  "window": [
+    25,
+    49
+  ],
+  "confusion_threshold": 0.5,
+  "poisoned_count": 261,
+  "empirical_rate": 0.01074074074074074
+}  /home/yazanme/BachelorThesis/BachelorThesis/data/processed/resisc45/poisoned/RQ2.4/seed_2026/poisoning_summary.json:
+{
+  "seed": 2026,
+  "window": [
+    25,
+    49
+  ],
+  "confusion_threshold": 0.5,
+  "poisoned_count": 260,
+  "empirical_rate": 0.010699588477366255
+}
