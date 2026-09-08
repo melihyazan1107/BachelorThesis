@@ -935,7 +935,6 @@ erkennt eine vergessene Datei.
 
 ---
 
-> [!CAUTION]
 > Die 16 Zielpaare in `poisoning.target_pairs` und die Paare in `rq2_2` gehören zu den
 > eingefrorenen Ergebnissen. [Schritt 3](#schritt-3-rq21-klassenpaare-finden)
 > beschreibt, wie sie neu ermittelt werden, aber für einen Nachvollzug der vorhandenen
@@ -967,7 +966,6 @@ freigegeben:
 > State of the Art", *Proceedings of the IEEE*, vol. 105, no. 10, pp. 1865-1883, 2017.
 > [doi:10.1109/JPROC.2017.2675998](https://doi.org/10.1109/JPROC.2017.2675998)
 
-> [!CAUTION]
 > Die von dieser Pipeline erzeugten Label-Sätze sind **absichtlich verfälschte**
 > Ableitungen der NWPU-RESISC45-Annotationen und dürfen nicht mit Ground Truth
 > verwechselt werden. Die Bilder selbst werden nie verändert: die vergifteten Labels
